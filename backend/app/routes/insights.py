@@ -1,6 +1,8 @@
 from collections import Counter
+from pathlib import Path
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
 from backend.app.database.session import get_db
@@ -29,6 +31,8 @@ router_anomalies = APIRouter(prefix="/anomalies", tags=["Anomalies"])
 router_subscriptions = APIRouter(prefix="/subscriptions", tags=["Subscriptions"])
 router_advisor = APIRouter(prefix="/advisor", tags=["Advisor"])
 router_dashboard = APIRouter(prefix="/dashboard", tags=["Dashboard"])
+
+_STATIC_INDEX = Path(__file__).resolve().parent.parent / "static" / "index.html"
 
 
 def _insight_bundle(db: Session, current: User) -> dict:
@@ -93,37 +97,6 @@ def get_anomalies(
 
     Runs an Isolation Forest model trained on the authenticated user's
     historical debit transactions and returns flagged statistical outliers.
-
-    Response schema
-    ---------------
-    {
-        "anomalies": [
-            {
-                "transaction_id": int,
-                "amount": float,
-                "merchant": str,
-                "category": str,
-                "transaction_date": ISO-8601 str,
-                "anomaly_score": float,          # higher = more unusual
-                "triggered_features": [str, ...], # e.g. ["unusual_amount"]
-                "reason": str                    # human-readable explanation
-            },
-            ...
-        ],
-        "total_analysed": int,
-        "disclaimer": str,
-        "model_params": {"algorithm": ..., "features": [...], ...}
-    }
-
-    Security
-    --------
-    Requires a valid JWT Bearer token (via Authorization header).
-    The dependency `get_current_user` enforces authentication and resolves
-    to the demo user when no token is supplied (dev / dashboard mode).
-
-    Note
-    ----
-    These are *statistical* anomalies, NOT fraud verdicts.
     """
     result = run_anomaly_detection(db, current, save_to_db=True)
     # Coerce each anomaly dict into the enriched AnomalyOut schema
@@ -190,7 +163,15 @@ def advisor_chat(
 
 
 @router_dashboard.get("")
-def dashboard(db: Session = Depends(get_db), current: User = Depends(get_current_user)) -> dict:
+def dashboard(
+    request: Request,
+    db: Session = Depends(get_db),
+    current: User = Depends(get_current_user),
+):
+    accept = request.headers.get("accept", "")
+    if "text/html" in accept and _STATIC_INDEX.exists():
+        return FileResponse(_STATIC_INDEX)
+
     bundle = _insight_bundle(db, current)
     month_spend = sum(
         r["amount"]
