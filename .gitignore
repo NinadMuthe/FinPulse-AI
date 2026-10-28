@@ -1,20 +1,86 @@
-# Python virtual environments
+# ===========================
+# Python
+# ===========================
 .venv/
 venv/
-
-# Environment variables / secrets
-.env
-
-# Python cache
+env/
+ENV/
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
 
+# ===========================
+# Environment / Secrets
+# ===========================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# ===========================
+# Jupyter Notebooks
+# ===========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===========================
 # VS Code
+# ===========================
 .vscode/
 
-# Node
+# ===========================
+# JetBrains / PyCharm
+# ===========================
+.idea/
+
+# ===========================
+# Node / React Native / Expo
+# ===========================
 node_modules/
+.expo/
+.expo-shared/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-backend/data/sample_receipt.png
+# ===========================
+# Logs
+# ===========================
+*.log
+logs/
 
-backend/data/processed_receipt.png
+# ===========================
+# Database
+# ===========================
+*.sqlite3
+*.db
+
+# ===========================
+# ML Models (large binaries)
+# ===========================
+ml/models/*.pt
+ml/models/*.pth
+ml/models/*.pkl
+ml/models/*.h5
+ml/models/*.bin
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini

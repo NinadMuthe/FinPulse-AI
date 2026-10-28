@@ -1,0 +1,578 @@
+date,amount,merchant,category,transaction_type,source,user_id,description,balance
+2026-04-30,1726.29,Practo,Healthcare,debit,sms,1,Paid INR 1726.29 to Practo on 2026-04-30,423273.71
+2026-04-30,280.22,Ola,Transport,debit,sms,1,Paid INR 280.22 to Ola on 2026-04-30,422993.49
+2026-04-30,566.74,Uber,Transport,debit,sms,1,Paid INR 566.74 to Uber on 2026-04-30,422426.75
+2026-04-30,1056.54,Indane Gas,Bills,debit,sms,1,Paid INR 1056.54 to Indane Gas on 2026-04-30,421370.21
+2026-05-01,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-05-01,100000.0
+2026-05-01,1628.2,DMart,Groceries,debit,sms,1,Paid INR 1628.20 to DMart on 2026-05-01,419742.01
+2026-05-01,724.16,Indane Gas,Bills,debit,sms,1,Paid INR 724.16 to Indane Gas on 2026-05-01,419017.85
+2026-05-01,4163.9,Decathlon,Shopping,debit,sms,1,Paid INR 4163.90 to Decathlon on 2026-05-01,414853.95
+2026-05-02,443.56,Uber,Transport,debit,sms,1,Paid INR 443.56 to Uber on 2026-05-02,414410.39
+2026-05-02,1458.38,Blinkit,Groceries,debit,receipt,1,Paid INR 1458.38 to Blinkit on 2026-05-02,412952.01
+2026-05-03,216.24,Uber,Transport,debit,sms,1,Paid INR 216.24 to Uber on 2026-05-03,412735.77
+2026-05-03,90.88,Chai Point,Food,debit,manual,1,Paid INR 90.88 to Chai Point on 2026-05-03,412644.89
+2026-05-03,673.55,Swiggy,Food,debit,manual,1,Paid INR 673.55 to Swiggy on 2026-05-03,411971.34
+2026-05-03,280.93,Ola,Transport,debit,sms,1,Paid INR 280.93 to Ola on 2026-05-03,411690.41
+2026-05-04,1358.64,Instamart,Groceries,debit,manual,1,Paid INR 1358.64 to Instamart on 2026-05-04,410331.77
+2026-05-04,734.9,Swiggy,Food,debit,receipt,1,Paid INR 734.90 to Swiggy on 2026-05-04,409596.87
+2026-05-04,3122.2,Flipkart,Shopping,debit,sms,1,Paid INR 3122.20 to Flipkart on 2026-05-04,406474.67
+2026-05-04,1093.26,BookMyShow,Entertainment,debit,sms,1,Paid INR 1093.26 to BookMyShow on 2026-05-04,405381.41
+2026-05-05,441.1,Zomato,Food,debit,receipt,1,Paid INR 441.10 to Zomato on 2026-05-05,404940.31
+2026-05-05,262.31,Zomato,Food,debit,sms,1,Paid INR 262.31 to Zomato on 2026-05-05,404678.0
+2026-05-06,484.37,Starbucks,Food,debit,sms,1,Paid INR 484.37 to Starbucks on 2026-05-06,404193.63
+2026-05-06,322.65,Chai Point,Food,debit,receipt,1,Paid INR 322.65 to Chai Point on 2026-05-06,403870.98
+2026-05-06,205.58,Petrol Pump,Transport,debit,manual,1,Paid INR 205.58 to Petrol Pump on 2026-05-06,403665.4
+2026-05-06,445.81,Chai Point,Food,debit,manual,1,Paid INR 445.81 to Chai Point on 2026-05-06,403219.59
+2026-05-06,396.81,Ola,Transport,debit,receipt,1,Paid INR 396.81 to Ola on 2026-05-06,402822.78
+2026-05-07,1107.15,BigBasket,Groceries,debit,receipt,1,Paid INR 1107.15 to BigBasket on 2026-05-07,401715.63
+2026-05-08,218.57,Zomato,Food,debit,sms,1,Paid INR 218.57 to Zomato on 2026-05-08,401497.06
+2026-05-09,235.16,McDonalds,Food,debit,manual,1,Paid INR 235.16 to McDonalds on 2026-05-09,401261.9
+2026-05-09,1472.3,Cult.fit,Healthcare,debit,receipt,1,Paid INR 1472.30 to Cult.fit on 2026-05-09,399789.6
+2026-05-09,186.95,Dominos,Food,debit,manual,1,Paid INR 186.95 to Dominos on 2026-05-09,399602.65
+2026-05-10,592.64,Zara,Shopping,debit,manual,1,Paid INR 592.64 to Zara on 2026-05-10,399010.01
+2026-05-10,167.77,Petrol Pump,Transport,debit,sms,1,Paid INR 167.77 to Petrol Pump on 2026-05-10,398842.24
+2026-05-10,238.54,Uber,Transport,debit,receipt,1,Paid INR 238.54 to Uber on 2026-05-10,398603.7
+2026-05-10,415.57,Starbucks,Food,debit,manual,1,Paid INR 415.57 to Starbucks on 2026-05-10,398188.13
+2026-05-10,1210.33,Water Supply,Bills,debit,receipt,1,Paid INR 1210.33 to Water Supply on 2026-05-10,396977.8
+2026-05-11,4899.19,Amazon,Shopping,debit,manual,1,Paid INR 4899.19 to Amazon on 2026-05-11,392078.61
+2026-05-11,828.48,McDonalds,Food,debit,receipt,1,Paid INR 828.48 to McDonalds on 2026-05-11,391250.13
+2026-05-12,421.83,Swiggy,Food,debit,sms,1,Paid INR 421.83 to Swiggy on 2026-05-12,390828.3
+2026-05-13,2048.66,Zepto,Groceries,debit,receipt,1,Paid INR 2048.66 to Zepto on 2026-05-13,388779.64
+2026-05-13,2049.61,Instamart,Groceries,debit,receipt,1,Paid INR 2049.61 to Instamart on 2026-05-13,386730.03
+2026-05-13,2198.53,Water Supply,Bills,debit,sms,1,Paid INR 2198.53 to Water Supply on 2026-05-13,384531.5
+2026-05-13,281.08,Zomato,Food,debit,sms,1,Paid INR 281.08 to Zomato on 2026-05-13,384250.42
+2026-05-13,357.94,Netflix,Entertainment,debit,receipt,1,Paid INR 357.94 to Netflix on 2026-05-13,383892.48
+2026-05-14,2201.51,BigBasket,Groceries,debit,receipt,1,Paid INR 2201.51 to BigBasket on 2026-05-14,381690.97
+2026-05-14,476.54,McDonalds,Food,debit,receipt,1,Paid INR 476.54 to McDonalds on 2026-05-14,381214.43
+2026-05-14,3661.9,Flipkart,Shopping,debit,sms,1,Paid INR 3661.90 to Flipkart on 2026-05-14,377552.53
+2026-05-15,1913.96,Myntra,Shopping,debit,manual,1,Paid INR 1913.96 to Myntra on 2026-05-15,375638.57
+2026-05-15,3088.25,BESCOM,Bills,debit,sms,1,Paid INR 3088.25 to BESCOM on 2026-05-15,372550.32
+2026-05-15,637.45,Dominos,Food,debit,manual,1,Paid INR 637.45 to Dominos on 2026-05-15,371912.87
+2026-05-16,1536.51,Zepto,Groceries,debit,manual,1,Paid INR 1536.51 to Zepto on 2026-05-16,370376.36
+2026-05-17,2000.6,Zara,Shopping,debit,manual,1,Paid INR 2000.60 to Zara on 2026-05-17,368375.76
+2026-05-17,454.2,Starbucks,Food,debit,sms,1,Paid INR 454.20 to Starbucks on 2026-05-17,367921.56
+2026-05-17,494.75,McDonalds,Food,debit,sms,1,Paid INR 494.75 to McDonalds on 2026-05-17,367426.81
+2026-05-18,2453.02,Blinkit,Groceries,debit,sms,1,Paid INR 2453.02 to Blinkit on 2026-05-18,364973.79
+2026-05-18,1296.26,1mg,Healthcare,debit,manual,1,Paid INR 1296.26 to 1mg on 2026-05-18,363677.53
+2026-05-19,2998.66,Flipkart,Shopping,debit,receipt,1,Paid INR 2998.66 to Flipkart on 2026-05-19,360678.87
+2026-05-19,745.86,Swiggy,Food,debit,manual,1,Paid INR 745.86 to Swiggy on 2026-05-19,359933.01
+2026-05-19,98.45,Swiggy,Food,debit,sms,1,Paid INR 98.45 to Swiggy on 2026-05-19,359834.56
+2026-05-20,292.65,Rapido,Transport,debit,sms,1,Paid INR 292.65 to Rapido on 2026-05-20,359541.91
+2026-05-20,813.73,Starbucks,Food,debit,receipt,1,Paid INR 813.73 to Starbucks on 2026-05-20,358728.18
+2026-05-20,756.75,Dominos,Food,debit,manual,1,Paid INR 756.75 to Dominos on 2026-05-20,357971.43
+2026-05-20,704.54,Chai Point,Food,debit,sms,1,Paid INR 704.54 to Chai Point on 2026-05-20,357266.89
+2026-05-21,696.66,Flipkart,Shopping,debit,receipt,1,Paid INR 696.66 to Flipkart on 2026-05-21,356570.23
+2026-05-21,2108.39,DMart,Groceries,debit,sms,1,Paid INR 2108.39 to DMart on 2026-05-21,354461.84
+2026-05-21,500.63,Zomato,Food,debit,sms,1,Paid INR 500.63 to Zomato on 2026-05-21,353961.21
+2026-05-21,241.85,BookMyShow,Entertainment,debit,manual,1,Paid INR 241.85 to BookMyShow on 2026-05-21,353719.36
+2026-05-21,257.45,Ola,Transport,debit,sms,1,Paid INR 257.45 to Ola on 2026-05-21,353461.91
+2026-05-22,1204.89,Water Supply,Bills,debit,receipt,1,Paid INR 1204.89 to Water Supply on 2026-05-22,352257.02
+2026-05-23,558.67,Ola,Transport,debit,sms,1,Paid INR 558.67 to Ola on 2026-05-23,351698.35
+2026-05-23,134.92,Metro Rail,Transport,debit,sms,1,Paid INR 134.92 to Metro Rail on 2026-05-23,351563.43
+2026-05-23,1250.62,Flipkart,Shopping,debit,receipt,1,Paid INR 1250.62 to Flipkart on 2026-05-23,350312.81
+2026-05-24,2547.05,Water Supply,Bills,debit,manual,1,Paid INR 2547.05 to Water Supply on 2026-05-24,347765.76
+2026-05-24,375.19,1mg,Healthcare,debit,sms,1,Paid INR 375.19 to 1mg on 2026-05-24,347390.57
+2026-05-24,636.74,Starbucks,Food,debit,sms,1,Paid INR 636.74 to Starbucks on 2026-05-24,346753.83
+2026-05-24,582.32,Rapido,Transport,debit,sms,1,Paid INR 582.32 to Rapido on 2026-05-24,346171.51
+2026-05-24,392.49,Starbucks,Food,debit,manual,1,Paid INR 392.49 to Starbucks on 2026-05-24,345779.02
+2026-05-25,587.62,McDonalds,Food,debit,manual,1,Paid INR 587.62 to McDonalds on 2026-05-25,345191.4
+2026-05-25,2382.91,Blinkit,Groceries,debit,manual,1,Paid INR 2382.91 to Blinkit on 2026-05-25,342808.49
+2026-05-25,457.27,Apollo Pharmacy,Healthcare,debit,receipt,1,Paid INR 457.27 to Apollo Pharmacy on 2026-05-25,342351.22
+2026-05-25,30109.65,Luxury Watch Boutique,Shopping,debit,sms,1,Txn of INR 30109.65 at Luxury Watch Boutique on 2026-05-25,1000.0
+2026-05-26,1037.69,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 1037.69 to PVR Cinemas on 2026-05-26,341313.53
+2026-05-26,511.32,Blinkit,Groceries,debit,manual,1,Paid INR 511.32 to Blinkit on 2026-05-26,340802.21
+2026-05-27,211.02,Dominos,Food,debit,sms,1,Paid INR 211.02 to Dominos on 2026-05-27,340591.19
+2026-05-27,1164.12,BookMyShow,Entertainment,debit,manual,1,Paid INR 1164.12 to BookMyShow on 2026-05-27,339427.07
+2026-05-27,352.2,1mg,Healthcare,debit,manual,1,Paid INR 352.20 to 1mg on 2026-05-27,339074.87
+2026-05-27,827.65,Starbucks,Food,debit,sms,1,Paid INR 827.65 to Starbucks on 2026-05-27,338247.22
+2026-05-27,1030.48,Netflix,Entertainment,debit,manual,1,Paid INR 1030.48 to Netflix on 2026-05-27,337216.74
+2026-05-28,381.9,Spotify,Entertainment,debit,sms,1,Paid INR 381.90 to Spotify on 2026-05-28,336834.84
+2026-05-28,356.63,Chai Point,Food,debit,receipt,1,Paid INR 356.63 to Chai Point on 2026-05-28,336478.21
+2026-05-28,251.02,Uber,Transport,debit,sms,1,Paid INR 251.02 to Uber on 2026-05-28,336227.19
+2026-05-28,497.5,McDonalds,Food,debit,sms,1,Paid INR 497.50 to McDonalds on 2026-05-28,335729.69
+2026-05-28,310.28,Chai Point,Food,debit,sms,1,Paid INR 310.28 to Chai Point on 2026-05-28,335419.41
+2026-05-29,268.37,Zomato,Food,debit,receipt,1,Paid INR 268.37 to Zomato on 2026-05-29,335151.04
+2026-05-29,825.76,Starbucks,Food,debit,sms,1,Paid INR 825.76 to Starbucks on 2026-05-29,334325.28
+2026-05-29,1828.22,Water Supply,Bills,debit,manual,1,Paid INR 1828.22 to Water Supply on 2026-05-29,332497.06
+2026-05-29,4214.58,Zara,Shopping,debit,manual,1,Paid INR 4214.58 to Zara on 2026-05-29,328282.48
+2026-05-30,447.56,Swiggy,Food,debit,sms,1,Paid INR 447.56 to Swiggy on 2026-05-30,327834.92
+2026-05-30,577.23,Chai Point,Food,debit,sms,1,Paid INR 577.23 to Chai Point on 2026-05-30,327257.69
+2026-05-30,1663.35,Instamart,Groceries,debit,sms,1,Paid INR 1663.35 to Instamart on 2026-05-30,325594.34
+2026-05-31,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-05-31,165000.0
+2026-05-31,514.89,Starbucks,Food,debit,receipt,1,Paid INR 514.89 to Starbucks on 2026-05-31,325079.45
+2026-05-31,2440.49,Myntra,Shopping,debit,sms,1,Paid INR 2440.49 to Myntra on 2026-05-31,322638.96
+2026-05-31,941.47,BookMyShow,Entertainment,debit,manual,1,Paid INR 941.47 to BookMyShow on 2026-05-31,321697.49
+2026-05-31,3948.02,Myntra,Shopping,debit,manual,1,Paid INR 3948.02 to Myntra on 2026-05-31,317749.47
+2026-06-01,270.87,Spotify,Entertainment,debit,manual,1,Paid INR 270.87 to Spotify on 2026-06-01,317478.6
+2026-06-01,265.99,Chai Point,Food,debit,sms,1,Paid INR 265.99 to Chai Point on 2026-06-01,317212.61
+2026-06-01,375.1,Blinkit,Groceries,debit,sms,1,Paid INR 375.10 to Blinkit on 2026-06-01,316837.51
+2026-06-01,496.07,Ola,Transport,debit,manual,1,Paid INR 496.07 to Ola on 2026-06-01,316341.44
+2026-06-01,480.11,Rapido,Transport,debit,manual,1,Paid INR 480.11 to Rapido on 2026-06-01,315861.33
+2026-06-02,729.6,Chai Point,Food,debit,receipt,1,Paid INR 729.60 to Chai Point on 2026-06-02,315131.73
+2026-06-03,353.22,McDonalds,Food,debit,sms,1,Paid INR 353.22 to McDonalds on 2026-06-03,314778.51
+2026-06-03,631.7,Zomato,Food,debit,receipt,1,Paid INR 631.70 to Zomato on 2026-06-03,314146.81
+2026-06-03,1197.05,Zepto,Groceries,debit,sms,1,Paid INR 1197.05 to Zepto on 2026-06-03,312949.76
+2026-06-03,2403.58,BigBasket,Groceries,debit,sms,1,Paid INR 2403.58 to BigBasket on 2026-06-03,310546.18
+2026-06-03,575.21,DMart,Groceries,debit,sms,1,Paid INR 575.21 to DMart on 2026-06-03,309970.97
+2026-06-04,316.94,Zepto,Groceries,debit,sms,1,Paid INR 316.94 to Zepto on 2026-06-04,309654.03
+2026-06-04,291.65,Rapido,Transport,debit,receipt,1,Paid INR 291.65 to Rapido on 2026-06-04,309362.38
+2026-06-04,252.58,Rapido,Transport,debit,sms,1,Paid INR 252.58 to Rapido on 2026-06-04,309109.8
+2026-06-04,250.47,Petrol Pump,Transport,debit,receipt,1,Paid INR 250.47 to Petrol Pump on 2026-06-04,308859.33
+2026-06-04,120.91,McDonalds,Food,debit,manual,1,Paid INR 120.91 to McDonalds on 2026-06-04,308738.42
+2026-06-05,2458.69,Blinkit,Groceries,debit,receipt,1,Paid INR 2458.69 to Blinkit on 2026-06-05,306279.73
+2026-06-05,391.46,Instamart,Groceries,debit,manual,1,Paid INR 391.46 to Instamart on 2026-06-05,305888.27
+2026-06-05,128.14,Dominos,Food,debit,receipt,1,Paid INR 128.14 to Dominos on 2026-06-05,305760.13
+2026-06-05,346.96,Ola,Transport,debit,sms,1,Paid INR 346.96 to Ola on 2026-06-05,305413.17
+2026-06-05,825.89,McDonalds,Food,debit,sms,1,Paid INR 825.89 to McDonalds on 2026-06-05,304587.28
+2026-06-06,640.2,McDonalds,Food,debit,receipt,1,Paid INR 640.20 to McDonalds on 2026-06-06,303947.08
+2026-06-06,313.47,Starbucks,Food,debit,manual,1,Paid INR 313.47 to Starbucks on 2026-06-06,303633.61
+2026-06-06,197.43,Chai Point,Food,debit,sms,1,Paid INR 197.43 to Chai Point on 2026-06-06,303436.18
+2026-06-06,599.62,Rapido,Transport,debit,receipt,1,Paid INR 599.62 to Rapido on 2026-06-06,302836.56
+2026-06-07,320.44,Dominos,Food,debit,receipt,1,Paid INR 320.44 to Dominos on 2026-06-07,302516.12
+2026-06-07,578.14,Starbucks,Food,debit,receipt,1,Paid INR 578.14 to Starbucks on 2026-06-07,301937.98
+2026-06-07,77.62,Petrol Pump,Transport,debit,sms,1,Paid INR 77.62 to Petrol Pump on 2026-06-07,301860.36
+2026-06-07,485.96,Metro Rail,Transport,debit,manual,1,Paid INR 485.96 to Metro Rail on 2026-06-07,301374.4
+2026-06-08,2248.78,Zara,Shopping,debit,sms,1,Paid INR 2248.78 to Zara on 2026-06-08,299125.62
+2026-06-08,639.31,Starbucks,Food,debit,sms,1,Paid INR 639.31 to Starbucks on 2026-06-08,298486.31
+2026-06-08,590.9,Swiggy,Food,debit,receipt,1,Paid INR 590.90 to Swiggy on 2026-06-08,297895.41
+2026-06-08,567.74,Petrol Pump,Transport,debit,receipt,1,Paid INR 567.74 to Petrol Pump on 2026-06-08,297327.67
+2026-06-08,296.69,BookMyShow,Entertainment,debit,sms,1,Paid INR 296.69 to BookMyShow on 2026-06-08,297030.98
+2026-06-09,1481.24,Zara,Shopping,debit,sms,1,Paid INR 1481.24 to Zara on 2026-06-09,295549.74
+2026-06-10,760.24,Starbucks,Food,debit,sms,1,Paid INR 760.24 to Starbucks on 2026-06-10,294789.5
+2026-06-10,2913.04,Indane Gas,Bills,debit,manual,1,Paid INR 2913.04 to Indane Gas on 2026-06-10,291876.46
+2026-06-10,220.56,Ola,Transport,debit,manual,1,Paid INR 220.56 to Ola on 2026-06-10,291655.9
+2026-06-10,622.06,Swiggy,Food,debit,sms,1,Paid INR 622.06 to Swiggy on 2026-06-10,291033.84
+2026-06-10,2031.63,Water Supply,Bills,debit,receipt,1,Paid INR 2031.63 to Water Supply on 2026-06-10,289002.21
+2026-06-11,104.54,Metro Rail,Transport,debit,sms,1,Paid INR 104.54 to Metro Rail on 2026-06-11,288897.67
+2026-06-11,230.19,Swiggy,Food,debit,manual,1,Paid INR 230.19 to Swiggy on 2026-06-11,288667.48
+2026-06-11,1463.59,Zepto,Groceries,debit,sms,1,Paid INR 1463.59 to Zepto on 2026-06-11,287203.89
+2026-06-11,431.55,Instamart,Groceries,debit,sms,1,Paid INR 431.55 to Instamart on 2026-06-11,286772.34
+2026-06-11,346.36,McDonalds,Food,debit,sms,1,Paid INR 346.36 to McDonalds on 2026-06-11,286425.98
+2026-06-12,292.46,Petrol Pump,Transport,debit,receipt,1,Paid INR 292.46 to Petrol Pump on 2026-06-12,286133.52
+2026-06-12,1151.13,Zara,Shopping,debit,manual,1,Paid INR 1151.13 to Zara on 2026-06-12,284982.39
+2026-06-13,285.44,Rapido,Transport,debit,sms,1,Paid INR 285.44 to Rapido on 2026-06-13,284696.95
+2026-06-14,1180.17,Cult.fit,Healthcare,debit,sms,1,Paid INR 1180.17 to Cult.fit on 2026-06-14,283516.78
+2026-06-14,173.01,Uber,Transport,debit,manual,1,Paid INR 173.01 to Uber on 2026-06-14,283343.77
+2026-06-14,503.95,Starbucks,Food,debit,manual,1,Paid INR 503.95 to Starbucks on 2026-06-14,282839.82
+2026-06-14,907.96,DMart,Groceries,debit,sms,1,Paid INR 907.96 to DMart on 2026-06-14,281931.86
+2026-06-14,2939.11,Flipkart,Shopping,debit,sms,1,Paid INR 2939.11 to Flipkart on 2026-06-14,278992.75
+2026-06-15,1655.08,Airtel,Bills,debit,sms,1,Paid INR 1655.08 to Airtel on 2026-06-15,277337.67
+2026-06-15,1719.2,Instamart,Groceries,debit,receipt,1,Paid INR 1719.20 to Instamart on 2026-06-15,275618.47
+2026-06-16,4755.69,Myntra,Shopping,debit,receipt,1,Paid INR 4755.69 to Myntra on 2026-06-16,270862.78
+2026-06-16,2486.94,DMart,Groceries,debit,manual,1,Paid INR 2486.94 to DMart on 2026-06-16,268375.84
+2026-06-17,2070.58,Blinkit,Groceries,debit,sms,1,Paid INR 2070.58 to Blinkit on 2026-06-17,266305.26
+2026-06-17,864.97,Practo,Healthcare,debit,sms,1,Paid INR 864.97 to Practo on 2026-06-17,265440.29
+2026-06-17,740.02,McDonalds,Food,debit,manual,1,Paid INR 740.02 to McDonalds on 2026-06-17,264700.27
+2026-06-18,440.08,McDonalds,Food,debit,manual,1,Paid INR 440.08 to McDonalds on 2026-06-18,264260.19
+2026-06-19,505.76,Petrol Pump,Transport,debit,sms,1,Paid INR 505.76 to Petrol Pump on 2026-06-19,263754.43
+2026-06-19,1224.64,Apollo Pharmacy,Healthcare,debit,manual,1,Paid INR 1224.64 to Apollo Pharmacy on 2026-06-19,262529.79
+2026-06-19,583.1,Dominos,Food,debit,manual,1,Paid INR 583.10 to Dominos on 2026-06-19,261946.69
+2026-06-19,638.69,Spotify,Entertainment,debit,receipt,1,Paid INR 638.69 to Spotify on 2026-06-19,261308.0
+2026-06-20,298.14,Starbucks,Food,debit,manual,1,Paid INR 298.14 to Starbucks on 2026-06-20,261009.86
+2026-06-21,2338.32,BigBasket,Groceries,debit,receipt,1,Paid INR 2338.32 to BigBasket on 2026-06-21,258671.54
+2026-06-22,1203.34,Zepto,Groceries,debit,sms,1,Paid INR 1203.34 to Zepto on 2026-06-22,257468.2
+2026-06-22,330.02,Petrol Pump,Transport,debit,sms,1,Paid INR 330.02 to Petrol Pump on 2026-06-22,257138.18
+2026-06-22,2782.64,Indane Gas,Bills,debit,receipt,1,Paid INR 2782.64 to Indane Gas on 2026-06-22,254355.54
+2026-06-23,1396.87,Zepto,Groceries,debit,manual,1,Paid INR 1396.87 to Zepto on 2026-06-23,252958.67
+2026-06-23,338.78,Zomato,Food,debit,sms,1,Paid INR 338.78 to Zomato on 2026-06-23,252619.89
+2026-06-23,263.12,Swiggy,Food,debit,receipt,1,Paid INR 263.12 to Swiggy on 2026-06-23,252356.77
+2026-06-23,432.44,Uber,Transport,debit,sms,1,Paid INR 432.44 to Uber on 2026-06-23,251924.33
+2026-06-24,322.88,Ola,Transport,debit,manual,1,Paid INR 322.88 to Ola on 2026-06-24,251601.45
+2026-06-24,1084.77,BigBasket,Groceries,debit,receipt,1,Paid INR 1084.77 to BigBasket on 2026-06-24,250516.68
+2026-06-24,605.59,McDonalds,Food,debit,receipt,1,Paid INR 605.59 to McDonalds on 2026-06-24,249911.09
+2026-06-24,808.33,BookMyShow,Entertainment,debit,manual,1,Paid INR 808.33 to BookMyShow on 2026-06-24,249102.76
+2026-06-25,855.18,Blinkit,Groceries,debit,sms,1,Paid INR 855.18 to Blinkit on 2026-06-25,248247.58
+2026-06-26,2242.47,Water Supply,Bills,debit,manual,1,Paid INR 2242.47 to Water Supply on 2026-06-26,246005.11
+2026-06-26,95.36,Dominos,Food,debit,manual,1,Paid INR 95.36 to Dominos on 2026-06-26,245909.75
+2026-06-27,671.27,Zomato,Food,debit,sms,1,Paid INR 671.27 to Zomato on 2026-06-27,245238.48
+2026-06-27,120.0,Swiggy,Food,debit,sms,1,Paid INR 120.00 to Swiggy on 2026-06-27,245118.48
+2026-06-27,4796.23,Flipkart,Shopping,debit,sms,1,Paid INR 4796.23 to Flipkart on 2026-06-27,240322.25
+2026-06-28,645.97,Dominos,Food,debit,receipt,1,Paid INR 645.97 to Dominos on 2026-06-28,239676.28
+2026-06-28,826.63,Flipkart,Shopping,debit,sms,1,Paid INR 826.63 to Flipkart on 2026-06-28,238849.65
+2026-06-28,819.84,McDonalds,Food,debit,sms,1,Paid INR 819.84 to McDonalds on 2026-06-28,238029.81
+2026-06-29,304.61,Swiggy,Food,debit,sms,1,Paid INR 304.61 to Swiggy on 2026-06-29,237725.2
+2026-06-29,708.35,Chai Point,Food,debit,sms,1,Paid INR 708.35 to Chai Point on 2026-06-29,237016.85
+2026-06-29,26567.88,Luxury Watch Boutique,Shopping,debit,sms,1,Txn of INR 26567.88 at Luxury Watch Boutique on 2026-06-29,1000.0
+2026-06-30,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-06-30,230000.0
+2026-06-30,261.68,Uber,Transport,debit,receipt,1,Paid INR 261.68 to Uber on 2026-06-30,236755.17
+2026-06-30,685.05,McDonalds,Food,debit,sms,1,Paid INR 685.05 to McDonalds on 2026-06-30,236070.12
+2026-06-30,1495.92,Cult.fit,Healthcare,debit,receipt,1,Paid INR 1495.92 to Cult.fit on 2026-06-30,234574.2
+2026-06-30,521.05,Chai Point,Food,debit,manual,1,Paid INR 521.05 to Chai Point on 2026-06-30,234053.15
+2026-07-01,982.73,Spotify,Entertainment,debit,sms,1,Paid INR 982.73 to Spotify on 2026-07-01,233070.42
+2026-07-01,1164.51,Water Supply,Bills,debit,receipt,1,Paid INR 1164.51 to Water Supply on 2026-07-01,231905.91
+2026-07-01,774.71,Starbucks,Food,debit,sms,1,Paid INR 774.71 to Starbucks on 2026-07-01,231131.2
+2026-07-01,199.39,Rapido,Transport,debit,manual,1,Paid INR 199.39 to Rapido on 2026-07-01,230931.81
+2026-07-02,321.5,Zomato,Food,debit,receipt,1,Paid INR 321.50 to Zomato on 2026-07-02,230610.31
+2026-07-02,571.37,Starbucks,Food,debit,manual,1,Paid INR 571.37 to Starbucks on 2026-07-02,230038.94
+2026-07-02,518.61,Zomato,Food,debit,receipt,1,Paid INR 518.61 to Zomato on 2026-07-02,229520.33
+2026-07-02,560.04,Petrol Pump,Transport,debit,receipt,1,Paid INR 560.04 to Petrol Pump on 2026-07-02,228960.29
+2026-07-02,131.89,Starbucks,Food,debit,manual,1,Paid INR 131.89 to Starbucks on 2026-07-02,228828.4
+2026-07-03,1517.81,Jio,Bills,debit,sms,1,Paid INR 1517.81 to Jio on 2026-07-03,227310.59
+2026-07-03,1035.82,Netflix,Entertainment,debit,receipt,1,Paid INR 1035.82 to Netflix on 2026-07-03,226274.77
+2026-07-03,486.02,Petrol Pump,Transport,debit,sms,1,Paid INR 486.02 to Petrol Pump on 2026-07-03,225788.75
+2026-07-03,551.38,Chai Point,Food,debit,manual,1,Paid INR 551.38 to Chai Point on 2026-07-03,225237.37
+2026-07-03,867.87,Zara,Shopping,debit,receipt,1,Paid INR 867.87 to Zara on 2026-07-03,224369.5
+2026-07-04,752.63,Zomato,Food,debit,manual,1,Paid INR 752.63 to Zomato on 2026-07-04,223616.87
+2026-07-04,1043.14,Apollo Pharmacy,Healthcare,debit,manual,1,Paid INR 1043.14 to Apollo Pharmacy on 2026-07-04,222573.73
+2026-07-04,265.35,Blinkit,Groceries,debit,receipt,1,Paid INR 265.35 to Blinkit on 2026-07-04,222308.38
+2026-07-04,975.64,Water Supply,Bills,debit,sms,1,Paid INR 975.64 to Water Supply on 2026-07-04,221332.74
+2026-07-05,741.43,McDonalds,Food,debit,receipt,1,Paid INR 741.43 to McDonalds on 2026-07-05,220591.31
+2026-07-06,172.72,Ola,Transport,debit,manual,1,Paid INR 172.72 to Ola on 2026-07-06,220418.59
+2026-07-06,921.58,Spotify,Entertainment,debit,sms,1,Paid INR 921.58 to Spotify on 2026-07-06,219497.01
+2026-07-06,453.15,BookMyShow,Entertainment,debit,manual,1,Paid INR 453.15 to BookMyShow on 2026-07-06,219043.86
+2026-07-06,822.89,Jio,Bills,debit,sms,1,Paid INR 822.89 to Jio on 2026-07-06,218220.97
+2026-07-06,824.89,Blinkit,Groceries,debit,receipt,1,Paid INR 824.89 to Blinkit on 2026-07-06,217396.08
+2026-07-07,4578.94,Decathlon,Shopping,debit,sms,1,Paid INR 4578.94 to Decathlon on 2026-07-07,212817.14
+2026-07-08,126.12,Metro Rail,Transport,debit,manual,1,Paid INR 126.12 to Metro Rail on 2026-07-08,212691.02
+2026-07-08,154.71,Dominos,Food,debit,sms,1,Paid INR 154.71 to Dominos on 2026-07-08,212536.31
+2026-07-08,5157.58,Decathlon,Shopping,debit,receipt,1,Paid INR 5157.58 to Decathlon on 2026-07-08,207378.73
+2026-07-08,247.82,Starbucks,Food,debit,sms,1,Paid INR 247.82 to Starbucks on 2026-07-08,207130.91
+2026-07-09,402.52,Uber,Transport,debit,sms,1,Paid INR 402.52 to Uber on 2026-07-09,206728.39
+2026-07-09,206.3,Metro Rail,Transport,debit,sms,1,Paid INR 206.30 to Metro Rail on 2026-07-09,206522.09
+2026-07-09,522.19,Uber,Transport,debit,manual,1,Paid INR 522.19 to Uber on 2026-07-09,205999.9
+2026-07-09,1622.63,Instamart,Groceries,debit,sms,1,Paid INR 1622.63 to Instamart on 2026-07-09,204377.27
+2026-07-10,403.02,Dominos,Food,debit,sms,1,Paid INR 403.02 to Dominos on 2026-07-10,203974.25
+2026-07-10,302.39,Starbucks,Food,debit,receipt,1,Paid INR 302.39 to Starbucks on 2026-07-10,203671.86
+2026-07-10,167.92,Swiggy,Food,debit,manual,1,Paid INR 167.92 to Swiggy on 2026-07-10,203503.94
+2026-07-10,763.76,Dominos,Food,debit,receipt,1,Paid INR 763.76 to Dominos on 2026-07-10,202740.18
+2026-07-11,781.25,Instamart,Groceries,debit,sms,1,Paid INR 781.25 to Instamart on 2026-07-11,201958.93
+2026-07-11,1756.05,Zara,Shopping,debit,sms,1,Paid INR 1756.05 to Zara on 2026-07-11,200202.88
+2026-07-12,393.93,Zepto,Groceries,debit,sms,1,Paid INR 393.93 to Zepto on 2026-07-12,199808.95
+2026-07-12,2105.21,DMart,Groceries,debit,receipt,1,Paid INR 2105.21 to DMart on 2026-07-12,197703.74
+2026-07-12,2079.62,Zepto,Groceries,debit,sms,1,Paid INR 2079.62 to Zepto on 2026-07-12,195624.12
+2026-07-13,3938.53,Decathlon,Shopping,debit,sms,1,Paid INR 3938.53 to Decathlon on 2026-07-13,191685.59
+2026-07-13,131.48,Starbucks,Food,debit,manual,1,Paid INR 131.48 to Starbucks on 2026-07-13,191554.11
+2026-07-14,161.5,Chai Point,Food,debit,manual,1,Paid INR 161.50 to Chai Point on 2026-07-14,191392.61
+2026-07-14,1101.6,BigBasket,Groceries,debit,manual,1,Paid INR 1101.60 to BigBasket on 2026-07-14,190291.01
+2026-07-15,202.85,BigBasket,Groceries,debit,receipt,1,Paid INR 202.85 to BigBasket on 2026-07-15,190088.16
+2026-07-15,1666.96,Apollo Pharmacy,Healthcare,debit,receipt,1,Paid INR 1666.96 to Apollo Pharmacy on 2026-07-15,188421.2
+2026-07-15,3473.08,Zara,Shopping,debit,sms,1,Paid INR 3473.08 to Zara on 2026-07-15,184948.12
+2026-07-15,801.57,Zomato,Food,debit,sms,1,Paid INR 801.57 to Zomato on 2026-07-15,184146.55
+2026-07-15,386.49,Petrol Pump,Transport,debit,manual,1,Paid INR 386.49 to Petrol Pump on 2026-07-15,183760.06
+2026-07-16,2319.61,BigBasket,Groceries,debit,sms,1,Paid INR 2319.61 to BigBasket on 2026-07-16,181440.45
+2026-07-16,391.71,DMart,Groceries,debit,sms,1,Paid INR 391.71 to DMart on 2026-07-16,181048.74
+2026-07-17,232.64,Chai Point,Food,debit,sms,1,Paid INR 232.64 to Chai Point on 2026-07-17,180816.1
+2026-07-18,4903.66,Zara,Shopping,debit,sms,1,Paid INR 4903.66 to Zara on 2026-07-18,175912.44
+2026-07-18,550.86,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 550.86 to PVR Cinemas on 2026-07-18,175361.58
+2026-07-19,1359.87,DMart,Groceries,debit,sms,1,Paid INR 1359.87 to DMart on 2026-07-19,174001.71
+2026-07-19,342.57,Chai Point,Food,debit,sms,1,Paid INR 342.57 to Chai Point on 2026-07-19,173659.14
+2026-07-19,770.04,Spotify,Entertainment,debit,manual,1,Paid INR 770.04 to Spotify on 2026-07-19,172889.1
+2026-07-20,306.22,Dominos,Food,debit,manual,1,Paid INR 306.22 to Dominos on 2026-07-20,172582.88
+2026-07-20,384.56,Starbucks,Food,debit,sms,1,Paid INR 384.56 to Starbucks on 2026-07-20,172198.32
+2026-07-20,389.6,McDonalds,Food,debit,sms,1,Paid INR 389.60 to McDonalds on 2026-07-20,171808.72
+2026-07-20,388.35,Petrol Pump,Transport,debit,manual,1,Paid INR 388.35 to Petrol Pump on 2026-07-20,171420.37
+2026-07-20,797.07,McDonalds,Food,debit,receipt,1,Paid INR 797.07 to McDonalds on 2026-07-20,170623.3
+2026-07-21,326.2,BigBasket,Groceries,debit,receipt,1,Paid INR 326.20 to BigBasket on 2026-07-21,170297.1
+2026-07-21,515.84,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 515.84 to PVR Cinemas on 2026-07-21,169781.26
+2026-07-21,1464.84,DMart,Groceries,debit,manual,1,Paid INR 1464.84 to DMart on 2026-07-21,168316.42
+2026-07-21,1386.01,Instamart,Groceries,debit,receipt,1,Paid INR 1386.01 to Instamart on 2026-07-21,166930.41
+2026-07-22,313.1,Chai Point,Food,debit,receipt,1,Paid INR 313.10 to Chai Point on 2026-07-22,166617.31
+2026-07-22,293.6,Zomato,Food,debit,receipt,1,Paid INR 293.60 to Zomato on 2026-07-22,166323.71
+2026-07-23,676.38,Instamart,Groceries,debit,receipt,1,Paid INR 676.38 to Instamart on 2026-07-23,165647.33
+2026-07-23,394.28,Zomato,Food,debit,sms,1,Paid INR 394.28 to Zomato on 2026-07-23,165253.05
+2026-07-23,204.86,Spotify,Entertainment,debit,receipt,1,Paid INR 204.86 to Spotify on 2026-07-23,165048.19
+2026-07-23,1560.84,BigBasket,Groceries,debit,sms,1,Paid INR 1560.84 to BigBasket on 2026-07-23,163487.35
+2026-07-23,679.15,McDonalds,Food,debit,receipt,1,Paid INR 679.15 to McDonalds on 2026-07-23,162808.2
+2026-07-24,154.93,Starbucks,Food,debit,sms,1,Paid INR 154.93 to Starbucks on 2026-07-24,162653.27
+2026-07-24,125.3,Starbucks,Food,debit,sms,1,Paid INR 125.30 to Starbucks on 2026-07-24,162527.97
+2026-07-25,97.42,McDonalds,Food,debit,sms,1,Paid INR 97.42 to McDonalds on 2026-07-25,162430.55
+2026-07-25,121.67,Starbucks,Food,debit,manual,1,Paid INR 121.67 to Starbucks on 2026-07-25,162308.88
+2026-07-25,119.07,Dominos,Food,debit,manual,1,Paid INR 119.07 to Dominos on 2026-07-25,162189.81
+2026-07-25,63.05,Rapido,Transport,debit,receipt,1,Paid INR 63.05 to Rapido on 2026-07-25,162126.76
+2026-07-26,419.75,BookMyShow,Entertainment,debit,manual,1,Paid INR 419.75 to BookMyShow on 2026-07-26,161707.01
+2026-07-26,2451.49,Instamart,Groceries,debit,receipt,1,Paid INR 2451.49 to Instamart on 2026-07-26,159255.52
+2026-07-26,2353.96,Zepto,Groceries,debit,sms,1,Paid INR 2353.96 to Zepto on 2026-07-26,156901.56
+2026-07-26,169.43,Dominos,Food,debit,receipt,1,Paid INR 169.43 to Dominos on 2026-07-26,156732.13
+2026-07-27,746.07,PVR Cinemas,Entertainment,debit,receipt,1,Paid INR 746.07 to PVR Cinemas on 2026-07-27,155986.06
+2026-07-27,927.56,Netflix,Entertainment,debit,sms,1,Paid INR 927.56 to Netflix on 2026-07-27,155058.5
+2026-07-27,236.43,Dominos,Food,debit,sms,1,Paid INR 236.43 to Dominos on 2026-07-27,154822.07
+2026-07-27,302.07,Uber,Transport,debit,sms,1,Paid INR 302.07 to Uber on 2026-07-27,154520.0
+2026-07-28,467.43,Ola,Transport,debit,sms,1,Paid INR 467.43 to Ola on 2026-07-28,154052.57
+2026-07-28,107.25,McDonalds,Food,debit,sms,1,Paid INR 107.25 to McDonalds on 2026-07-28,153945.32
+2026-07-28,509.5,Metro Rail,Transport,debit,manual,1,Paid INR 509.50 to Metro Rail on 2026-07-28,153435.82
+2026-07-28,607.86,Zomato,Food,debit,sms,1,Paid INR 607.86 to Zomato on 2026-07-28,152827.96
+2026-07-28,695.06,PVR Cinemas,Entertainment,debit,receipt,1,Paid INR 695.06 to PVR Cinemas on 2026-07-28,152132.9
+2026-07-29,222.19,Spotify,Entertainment,debit,sms,1,Paid INR 222.19 to Spotify on 2026-07-29,151910.71
+2026-07-29,105.4,Zomato,Food,debit,sms,1,Paid INR 105.40 to Zomato on 2026-07-29,151805.31
+2026-07-29,118.24,Uber,Transport,debit,manual,1,Paid INR 118.24 to Uber on 2026-07-29,151687.07
+2026-07-29,754.01,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 754.01 to PVR Cinemas on 2026-07-29,150933.06
+2026-07-30,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-07-30,295000.0
+2026-07-30,3860.33,Zara,Shopping,debit,receipt,1,Paid INR 3860.33 to Zara on 2026-07-30,147072.73
+2026-07-31,197.13,Zomato,Food,debit,receipt,1,Paid INR 197.13 to Zomato on 2026-07-31,146875.6
+2026-07-31,428.22,BigBasket,Groceries,debit,sms,1,Paid INR 428.22 to BigBasket on 2026-07-31,146447.38
+2026-07-31,339.97,Chai Point,Food,debit,manual,1,Paid INR 339.97 to Chai Point on 2026-07-31,146107.41
+2026-07-31,981.59,Zepto,Groceries,debit,manual,1,Paid INR 981.59 to Zepto on 2026-07-31,145125.82
+2026-07-31,521.85,Uber,Transport,debit,receipt,1,Paid INR 521.85 to Uber on 2026-07-31,144603.97
+2026-08-01,215.98,Petrol Pump,Transport,debit,sms,1,Paid INR 215.98 to Petrol Pump on 2026-08-01,144387.99
+2026-08-01,407.83,Dominos,Food,debit,receipt,1,Paid INR 407.83 to Dominos on 2026-08-01,143980.16
+2026-08-01,2303.52,DMart,Groceries,debit,receipt,1,Paid INR 2303.52 to DMart on 2026-08-01,141676.64
+2026-08-01,1737.21,BigBasket,Groceries,debit,sms,1,Paid INR 1737.21 to BigBasket on 2026-08-01,139939.43
+2026-08-01,856.85,Cult.fit,Healthcare,debit,receipt,1,Paid INR 856.85 to Cult.fit on 2026-08-01,139082.58
+2026-08-02,555.63,Chai Point,Food,debit,sms,1,Paid INR 555.63 to Chai Point on 2026-08-02,138526.95
+2026-08-02,815.7,Zomato,Food,debit,receipt,1,Paid INR 815.70 to Zomato on 2026-08-02,137711.25
+2026-08-02,327.33,Uber,Transport,debit,receipt,1,Paid INR 327.33 to Uber on 2026-08-02,137383.92
+2026-08-02,848.24,Apollo Pharmacy,Healthcare,debit,receipt,1,Paid INR 848.24 to Apollo Pharmacy on 2026-08-02,136535.68
+2026-08-03,351.06,Uber,Transport,debit,sms,1,Paid INR 351.06 to Uber on 2026-08-03,136184.62
+2026-08-03,1574.12,BigBasket,Groceries,debit,sms,1,Paid INR 1574.12 to BigBasket on 2026-08-03,134610.5
+2026-08-03,134.81,Rapido,Transport,debit,sms,1,Paid INR 134.81 to Rapido on 2026-08-03,134475.69
+2026-08-03,409.02,Uber,Transport,debit,manual,1,Paid INR 409.02 to Uber on 2026-08-03,134066.67
+2026-08-03,462.59,Starbucks,Food,debit,manual,1,Paid INR 462.59 to Starbucks on 2026-08-03,133604.08
+2026-08-03,23028.06,Luxury Watch Boutique,Shopping,debit,sms,1,Txn of INR 23028.06 at Luxury Watch Boutique on 2026-08-03,1000.0
+2026-08-04,467.25,Petrol Pump,Transport,debit,manual,1,Paid INR 467.25 to Petrol Pump on 2026-08-04,133136.83
+2026-08-04,521.33,Ola,Transport,debit,sms,1,Paid INR 521.33 to Ola on 2026-08-04,132615.5
+2026-08-05,439.44,Swiggy,Food,debit,sms,1,Paid INR 439.44 to Swiggy on 2026-08-05,132176.06
+2026-08-05,807.07,McDonalds,Food,debit,manual,1,Paid INR 807.07 to McDonalds on 2026-08-05,131368.99
+2026-08-05,1031.85,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 1031.85 to PVR Cinemas on 2026-08-05,130337.14
+2026-08-05,393.23,Blinkit,Groceries,debit,sms,1,Paid INR 393.23 to Blinkit on 2026-08-05,129943.91
+2026-08-06,2695.46,Flipkart,Shopping,debit,sms,1,Paid INR 2695.46 to Flipkart on 2026-08-06,127248.45
+2026-08-06,2128.35,Jio,Bills,debit,sms,1,Paid INR 2128.35 to Jio on 2026-08-06,125120.1
+2026-08-07,572.32,Uber,Transport,debit,sms,1,Paid INR 572.32 to Uber on 2026-08-07,124547.78
+2026-08-07,718.19,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 718.19 to PVR Cinemas on 2026-08-07,123829.59
+2026-08-07,374.38,Rapido,Transport,debit,sms,1,Paid INR 374.38 to Rapido on 2026-08-07,123455.21
+2026-08-08,825.82,Swiggy,Food,debit,sms,1,Paid INR 825.82 to Swiggy on 2026-08-08,122629.39
+2026-08-08,304.25,Uber,Transport,debit,sms,1,Paid INR 304.25 to Uber on 2026-08-08,122325.14
+2026-08-08,414.55,Swiggy,Food,debit,receipt,1,Paid INR 414.55 to Swiggy on 2026-08-08,121910.59
+2026-08-09,1329.69,BigBasket,Groceries,debit,manual,1,Paid INR 1329.69 to BigBasket on 2026-08-09,120580.9
+2026-08-09,1697.42,Cult.fit,Healthcare,debit,sms,1,Paid INR 1697.42 to Cult.fit on 2026-08-09,118883.48
+2026-08-09,2217.58,Instamart,Groceries,debit,sms,1,Paid INR 2217.58 to Instamart on 2026-08-09,116665.9
+2026-08-09,2281.77,Decathlon,Shopping,debit,sms,1,Paid INR 2281.77 to Decathlon on 2026-08-09,114384.13
+2026-08-10,2738.54,Zara,Shopping,debit,receipt,1,Paid INR 2738.54 to Zara on 2026-08-10,111645.59
+2026-08-11,542.54,Swiggy,Food,debit,receipt,1,Paid INR 542.54 to Swiggy on 2026-08-11,111103.05
+2026-08-12,1451.99,DMart,Groceries,debit,sms,1,Paid INR 1451.99 to DMart on 2026-08-12,109651.06
+2026-08-13,1965.73,Zepto,Groceries,debit,receipt,1,Paid INR 1965.73 to Zepto on 2026-08-13,107685.33
+2026-08-13,301.77,Swiggy,Food,debit,sms,1,Paid INR 301.77 to Swiggy on 2026-08-13,107383.56
+2026-08-13,367.54,Petrol Pump,Transport,debit,sms,1,Paid INR 367.54 to Petrol Pump on 2026-08-13,107016.02
+2026-08-14,261.74,McDonalds,Food,debit,sms,1,Paid INR 261.74 to McDonalds on 2026-08-14,106754.28
+2026-08-14,961.0,Zepto,Groceries,debit,sms,1,Paid INR 961.00 to Zepto on 2026-08-14,105793.28
+2026-08-14,830.97,McDonalds,Food,debit,manual,1,Paid INR 830.97 to McDonalds on 2026-08-14,104962.31
+2026-08-14,1741.98,Airtel,Bills,debit,receipt,1,Paid INR 1741.98 to Airtel on 2026-08-14,103220.33
+2026-08-15,1072.13,Zepto,Groceries,debit,manual,1,Paid INR 1072.13 to Zepto on 2026-08-15,102148.2
+2026-08-15,187.56,Zomato,Food,debit,receipt,1,Paid INR 187.56 to Zomato on 2026-08-15,101960.64
+2026-08-15,208.96,BigBasket,Groceries,debit,sms,1,Paid INR 208.96 to BigBasket on 2026-08-15,101751.68
+2026-08-16,669.14,Swiggy,Food,debit,manual,1,Paid INR 669.14 to Swiggy on 2026-08-16,101082.54
+2026-08-16,911.06,Zepto,Groceries,debit,sms,1,Paid INR 911.06 to Zepto on 2026-08-16,100171.48
+2026-08-17,954.3,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 954.30 to PVR Cinemas on 2026-08-17,99217.18
+2026-08-17,358.87,Netflix,Entertainment,debit,receipt,1,Paid INR 358.87 to Netflix on 2026-08-17,98858.31
+2026-08-17,1835.34,Zepto,Groceries,debit,manual,1,Paid INR 1835.34 to Zepto on 2026-08-17,97022.97
+2026-08-18,1279.31,Blinkit,Groceries,debit,receipt,1,Paid INR 1279.31 to Blinkit on 2026-08-18,95743.66
+2026-08-18,314.36,Ola,Transport,debit,receipt,1,Paid INR 314.36 to Ola on 2026-08-18,95429.3
+2026-08-18,546.66,Starbucks,Food,debit,sms,1,Paid INR 546.66 to Starbucks on 2026-08-18,94882.64
+2026-08-18,280.6,Metro Rail,Transport,debit,sms,1,Paid INR 280.60 to Metro Rail on 2026-08-18,94602.04
+2026-08-18,415.75,Zomato,Food,debit,sms,1,Paid INR 415.75 to Zomato on 2026-08-18,94186.29
+2026-08-19,2799.64,Myntra,Shopping,debit,manual,1,Paid INR 2799.64 to Myntra on 2026-08-19,91386.65
+2026-08-19,583.69,Uber,Transport,debit,sms,1,Paid INR 583.69 to Uber on 2026-08-19,90802.96
+2026-08-20,741.37,Chai Point,Food,debit,manual,1,Paid INR 741.37 to Chai Point on 2026-08-20,90061.59
+2026-08-20,306.76,Dominos,Food,debit,receipt,1,Paid INR 306.76 to Dominos on 2026-08-20,89754.83
+2026-08-20,240.86,Zomato,Food,debit,receipt,1,Paid INR 240.86 to Zomato on 2026-08-20,89513.97
+2026-08-20,1236.96,BigBasket,Groceries,debit,sms,1,Paid INR 1236.96 to BigBasket on 2026-08-20,88277.01
+2026-08-21,648.23,McDonalds,Food,debit,receipt,1,Paid INR 648.23 to McDonalds on 2026-08-21,87628.78
+2026-08-21,1061.93,Spotify,Entertainment,debit,manual,1,Paid INR 1061.93 to Spotify on 2026-08-21,86566.85
+2026-08-22,684.08,Starbucks,Food,debit,sms,1,Paid INR 684.08 to Starbucks on 2026-08-22,85882.77
+2026-08-23,1650.05,Zara,Shopping,debit,receipt,1,Paid INR 1650.05 to Zara on 2026-08-23,84232.72
+2026-08-23,314.52,Ola,Transport,debit,sms,1,Paid INR 314.52 to Ola on 2026-08-23,83918.2
+2026-08-23,5167.04,Myntra,Shopping,debit,manual,1,Paid INR 5167.04 to Myntra on 2026-08-23,78751.16
+2026-08-23,1297.21,BigBasket,Groceries,debit,manual,1,Paid INR 1297.21 to BigBasket on 2026-08-23,77453.95
+2026-08-24,1158.93,Zepto,Groceries,debit,sms,1,Paid INR 1158.93 to Zepto on 2026-08-24,76295.02
+2026-08-24,356.2,Starbucks,Food,debit,sms,1,Paid INR 356.20 to Starbucks on 2026-08-24,75938.82
+2026-08-24,468.75,Chai Point,Food,debit,sms,1,Paid INR 468.75 to Chai Point on 2026-08-24,75470.07
+2026-08-24,803.17,Instamart,Groceries,debit,sms,1,Paid INR 803.17 to Instamart on 2026-08-24,74666.9
+2026-08-25,2473.4,Blinkit,Groceries,debit,manual,1,Paid INR 2473.40 to Blinkit on 2026-08-25,72193.5
+2026-08-26,2215.73,Indane Gas,Bills,debit,manual,1,Paid INR 2215.73 to Indane Gas on 2026-08-26,69977.77
+2026-08-26,4436.85,Decathlon,Shopping,debit,receipt,1,Paid INR 4436.85 to Decathlon on 2026-08-26,65540.92
+2026-08-27,1022.84,Zepto,Groceries,debit,manual,1,Paid INR 1022.84 to Zepto on 2026-08-27,64518.08
+2026-08-27,2477.01,Instamart,Groceries,debit,sms,1,Paid INR 2477.01 to Instamart on 2026-08-27,62041.07
+2026-08-28,1625.71,Airtel,Bills,debit,sms,1,Paid INR 1625.71 to Airtel on 2026-08-28,60415.36
+2026-08-28,2337.01,Zepto,Groceries,debit,manual,1,Paid INR 2337.01 to Zepto on 2026-08-28,58078.35
+2026-08-28,316.77,Swiggy,Food,debit,sms,1,Paid INR 316.77 to Swiggy on 2026-08-28,57761.58
+2026-08-28,973.53,Water Supply,Bills,debit,receipt,1,Paid INR 973.53 to Water Supply on 2026-08-28,56788.05
+2026-08-29,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-08-29,360000.0
+2026-08-29,666.3,Starbucks,Food,debit,receipt,1,Paid INR 666.30 to Starbucks on 2026-08-29,56121.75
+2026-08-30,1212.09,BigBasket,Groceries,debit,sms,1,Paid INR 1212.09 to BigBasket on 2026-08-30,54909.66
+2026-08-30,516.83,Instamart,Groceries,debit,manual,1,Paid INR 516.83 to Instamart on 2026-08-30,54392.83
+2026-08-30,2679.33,BESCOM,Bills,debit,sms,1,Paid INR 2679.33 to BESCOM on 2026-08-30,51713.5
+2026-08-31,803.31,BigBasket,Groceries,debit,sms,1,Paid INR 803.31 to BigBasket on 2026-08-31,50910.19
+2026-08-31,262.86,DMart,Groceries,debit,sms,1,Paid INR 262.86 to DMart on 2026-08-31,50647.33
+2026-08-31,209.35,Ola,Transport,debit,sms,1,Paid INR 209.35 to Ola on 2026-08-31,50437.98
+2026-09-01,898.29,Jio,Bills,debit,sms,1,Paid INR 898.29 to Jio on 2026-09-01,49539.69
+2026-09-01,452.9,Metro Rail,Transport,debit,sms,1,Paid INR 452.90 to Metro Rail on 2026-09-01,49086.79
+2026-09-02,792.62,BESCOM,Bills,debit,sms,1,Paid INR 792.62 to BESCOM on 2026-09-02,48294.17
+2026-09-02,659.77,Dominos,Food,debit,sms,1,Paid INR 659.77 to Dominos on 2026-09-02,47634.4
+2026-09-03,2380.68,Instamart,Groceries,debit,sms,1,Paid INR 2380.68 to Instamart on 2026-09-03,45253.72
+2026-09-03,314.33,Dominos,Food,debit,sms,1,Paid INR 314.33 to Dominos on 2026-09-03,44939.39
+2026-09-03,2106.56,DMart,Groceries,debit,manual,1,Paid INR 2106.56 to DMart on 2026-09-03,42832.83
+2026-09-03,3255.01,Flipkart,Shopping,debit,receipt,1,Paid INR 3255.01 to Flipkart on 2026-09-03,39577.82
+2026-09-04,739.3,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 739.30 to PVR Cinemas on 2026-09-04,38838.52
+2026-09-04,2516.08,Decathlon,Shopping,debit,receipt,1,Paid INR 2516.08 to Decathlon on 2026-09-04,36322.44
+2026-09-04,1008.4,Netflix,Entertainment,debit,sms,1,Paid INR 1008.40 to Netflix on 2026-09-04,35314.04
+2026-09-04,74.5,Uber,Transport,debit,receipt,1,Paid INR 74.50 to Uber on 2026-09-04,35239.54
+2026-09-05,962.74,PVR Cinemas,Entertainment,debit,manual,1,Paid INR 962.74 to PVR Cinemas on 2026-09-05,34276.8
+2026-09-06,237.75,Rapido,Transport,debit,receipt,1,Paid INR 237.75 to Rapido on 2026-09-06,34039.05
+2026-09-06,389.94,Swiggy,Food,debit,sms,1,Paid INR 389.94 to Swiggy on 2026-09-06,33649.11
+2026-09-06,639.99,Chai Point,Food,debit,receipt,1,Paid INR 639.99 to Chai Point on 2026-09-06,33009.12
+2026-09-07,2477.28,Water Supply,Bills,debit,sms,1,Paid INR 2477.28 to Water Supply on 2026-09-07,30531.84
+2026-09-07,259.12,DMart,Groceries,debit,receipt,1,Paid INR 259.12 to DMart on 2026-09-07,30272.72
+2026-09-07,735.44,BookMyShow,Entertainment,debit,receipt,1,Paid INR 735.44 to BookMyShow on 2026-09-07,29537.28
+2026-09-07,291.73,DMart,Groceries,debit,receipt,1,Paid INR 291.73 to DMart on 2026-09-07,29245.55
+2026-09-07,31349.71,Luxury Watch Boutique,Shopping,debit,sms,1,Txn of INR 31349.71 at Luxury Watch Boutique on 2026-09-07,1000.0
+2026-09-08,2629.7,Amazon,Shopping,debit,manual,1,Paid INR 2629.70 to Amazon on 2026-09-08,26615.85
+2026-09-09,779.04,Zomato,Food,debit,sms,1,Paid INR 779.04 to Zomato on 2026-09-09,25836.81
+2026-09-09,2381.29,Jio,Bills,debit,sms,1,Paid INR 2381.29 to Jio on 2026-09-09,23455.52
+2026-09-09,678.81,Zomato,Food,debit,sms,1,Paid INR 678.81 to Zomato on 2026-09-09,22776.71
+2026-09-09,621.32,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 621.32 to PVR Cinemas on 2026-09-09,22155.39
+2026-09-09,146.31,Uber,Transport,debit,manual,1,Paid INR 146.31 to Uber on 2026-09-09,22009.08
+2026-09-10,2174.77,Myntra,Shopping,debit,sms,1,Paid INR 2174.77 to Myntra on 2026-09-10,19834.31
+2026-09-10,207.76,Swiggy,Food,debit,sms,1,Paid INR 207.76 to Swiggy on 2026-09-10,19626.55
+2026-09-10,352.97,Zomato,Food,debit,sms,1,Paid INR 352.97 to Zomato on 2026-09-10,19273.58
+2026-09-10,1305.15,Practo,Healthcare,debit,sms,1,Paid INR 1305.15 to Practo on 2026-09-10,17968.43
+2026-09-11,2822.64,Airtel,Bills,debit,receipt,1,Paid INR 2822.64 to Airtel on 2026-09-11,15145.79
+2026-09-11,2674.85,Airtel,Bills,debit,receipt,1,Paid INR 2674.85 to Airtel on 2026-09-11,12470.94
+2026-09-11,668.16,DMart,Groceries,debit,sms,1,Paid INR 668.16 to DMart on 2026-09-11,11802.78
+2026-09-11,543.15,Zepto,Groceries,debit,manual,1,Paid INR 543.15 to Zepto on 2026-09-11,11259.63
+2026-09-12,247.98,Chai Point,Food,debit,sms,1,Paid INR 247.98 to Chai Point on 2026-09-12,11011.65
+2026-09-12,848.63,McDonalds,Food,debit,receipt,1,Paid INR 848.63 to McDonalds on 2026-09-12,10163.02
+2026-09-12,597.81,Ola,Transport,debit,receipt,1,Paid INR 597.81 to Ola on 2026-09-12,9565.21
+2026-09-13,1525.04,BigBasket,Groceries,debit,manual,1,Paid INR 1525.04 to BigBasket on 2026-09-13,8040.17
+2026-09-14,1192.83,Spotify,Entertainment,debit,sms,1,Paid INR 1192.83 to Spotify on 2026-09-14,6847.34
+2026-09-14,408.46,Dominos,Food,debit,sms,1,Paid INR 408.46 to Dominos on 2026-09-14,6438.88
+2026-09-14,795.81,Zomato,Food,debit,sms,1,Paid INR 795.81 to Zomato on 2026-09-14,5643.07
+2026-09-14,2006.32,Instamart,Groceries,debit,receipt,1,Paid INR 2006.32 to Instamart on 2026-09-14,3636.75
+2026-09-15,267.16,Starbucks,Food,debit,sms,1,Paid INR 267.16 to Starbucks on 2026-09-15,3369.59
+2026-09-15,2459.97,Zepto,Groceries,debit,receipt,1,Paid INR 2459.97 to Zepto on 2026-09-15,1000.0
+2026-09-16,1625.07,Instamart,Groceries,debit,sms,1,Paid INR 1625.07 to Instamart on 2026-09-16,1000.0
+2026-09-17,333.84,BookMyShow,Entertainment,debit,manual,1,Paid INR 333.84 to BookMyShow on 2026-09-17,1000.0
+2026-09-18,2591.18,Indane Gas,Bills,debit,manual,1,Paid INR 2591.18 to Indane Gas on 2026-09-18,1000.0
+2026-09-18,533.44,Dominos,Food,debit,manual,1,Paid INR 533.44 to Dominos on 2026-09-18,1000.0
+2026-09-19,286.2,Metro Rail,Transport,debit,receipt,1,Paid INR 286.20 to Metro Rail on 2026-09-19,1000.0
+2026-09-19,526.52,Swiggy,Food,debit,manual,1,Paid INR 526.52 to Swiggy on 2026-09-19,1000.0
+2026-09-19,319.58,Zepto,Groceries,debit,sms,1,Paid INR 319.58 to Zepto on 2026-09-19,1000.0
+2026-09-19,91.3,Chai Point,Food,debit,manual,1,Paid INR 91.30 to Chai Point on 2026-09-19,1000.0
+2026-09-20,531.78,Petrol Pump,Transport,debit,sms,1,Paid INR 531.78 to Petrol Pump on 2026-09-20,1000.0
+2026-09-20,736.67,Chai Point,Food,debit,sms,1,Paid INR 736.67 to Chai Point on 2026-09-20,1000.0
+2026-09-20,1825.92,Airtel,Bills,debit,sms,1,Paid INR 1825.92 to Airtel on 2026-09-20,1000.0
+2026-09-20,2618.84,Airtel,Bills,debit,sms,1,Paid INR 2618.84 to Airtel on 2026-09-20,1000.0
+2026-09-20,272.06,Ola,Transport,debit,manual,1,Paid INR 272.06 to Ola on 2026-09-20,1000.0
+2026-09-21,115.02,Metro Rail,Transport,debit,sms,1,Paid INR 115.02 to Metro Rail on 2026-09-21,1000.0
+2026-09-21,3770.38,Decathlon,Shopping,debit,sms,1,Paid INR 3770.38 to Decathlon on 2026-09-21,1000.0
+2026-09-21,2416.25,BigBasket,Groceries,debit,manual,1,Paid INR 2416.25 to BigBasket on 2026-09-21,1000.0
+2026-09-21,837.02,Starbucks,Food,debit,receipt,1,Paid INR 837.02 to Starbucks on 2026-09-21,1000.0
+2026-09-22,2618.6,Indane Gas,Bills,debit,manual,1,Paid INR 2618.60 to Indane Gas on 2026-09-22,1000.0
+2026-09-22,231.49,Spotify,Entertainment,debit,receipt,1,Paid INR 231.49 to Spotify on 2026-09-22,1000.0
+2026-09-23,185.86,Ola,Transport,debit,sms,1,Paid INR 185.86 to Ola on 2026-09-23,1000.0
+2026-09-23,388.13,Zomato,Food,debit,sms,1,Paid INR 388.13 to Zomato on 2026-09-23,1000.0
+2026-09-23,304.59,Blinkit,Groceries,debit,manual,1,Paid INR 304.59 to Blinkit on 2026-09-23,1000.0
+2026-09-23,2528.52,Airtel,Bills,debit,manual,1,Paid INR 2528.52 to Airtel on 2026-09-23,1000.0
+2026-09-23,1081.82,Spotify,Entertainment,debit,sms,1,Paid INR 1081.82 to Spotify on 2026-09-23,1000.0
+2026-09-24,268.15,Swiggy,Food,debit,sms,1,Paid INR 268.15 to Swiggy on 2026-09-24,1000.0
+2026-09-24,912.53,Water Supply,Bills,debit,manual,1,Paid INR 912.53 to Water Supply on 2026-09-24,1000.0
+2026-09-24,566.87,DMart,Groceries,debit,sms,1,Paid INR 566.87 to DMart on 2026-09-24,1000.0
+2026-09-25,1877.63,Jio,Bills,debit,manual,1,Paid INR 1877.63 to Jio on 2026-09-25,1000.0
+2026-09-25,953.79,Blinkit,Groceries,debit,sms,1,Paid INR 953.79 to Blinkit on 2026-09-25,1000.0
+2026-09-25,307.05,McDonalds,Food,debit,sms,1,Paid INR 307.05 to McDonalds on 2026-09-25,1000.0
+2026-09-26,430.68,Petrol Pump,Transport,debit,sms,1,Paid INR 430.68 to Petrol Pump on 2026-09-26,1000.0
+2026-09-27,1128.58,Spotify,Entertainment,debit,sms,1,Paid INR 1128.58 to Spotify on 2026-09-27,1000.0
+2026-09-27,716.75,McDonalds,Food,debit,sms,1,Paid INR 716.75 to McDonalds on 2026-09-27,1000.0
+2026-09-27,824.83,BESCOM,Bills,debit,manual,1,Paid INR 824.83 to BESCOM on 2026-09-27,1000.0
+2026-09-28,65000.0,TechCorp Solutions,Salary/Income,credit,sms,1,A/C credited with INR 65000.00 by TechCorp on 2026-09-28,425000.0
+2026-09-28,2482.21,DMart,Groceries,debit,manual,1,Paid INR 2482.21 to DMart on 2026-09-28,1000.0
+2026-09-28,549.55,Netflix,Entertainment,debit,sms,1,Paid INR 549.55 to Netflix on 2026-09-28,1000.0
+2026-09-28,1293.81,Instamart,Groceries,debit,manual,1,Paid INR 1293.81 to Instamart on 2026-09-28,1000.0
+2026-09-28,1392.34,Instamart,Groceries,debit,sms,1,Paid INR 1392.34 to Instamart on 2026-09-28,1000.0
+2026-09-29,224.46,Rapido,Transport,debit,sms,1,Paid INR 224.46 to Rapido on 2026-09-29,1000.0
+2026-09-29,594.96,Starbucks,Food,debit,receipt,1,Paid INR 594.96 to Starbucks on 2026-09-29,1000.0
+2026-09-29,1811.07,Airtel,Bills,debit,receipt,1,Paid INR 1811.07 to Airtel on 2026-09-29,1000.0
+2026-09-29,522.62,Instamart,Groceries,debit,receipt,1,Paid INR 522.62 to Instamart on 2026-09-29,1000.0
+2026-09-30,545.45,Swiggy,Food,debit,manual,1,Paid INR 545.45 to Swiggy on 2026-09-30,1000.0
+2026-09-30,1515.13,BigBasket,Groceries,debit,sms,1,Paid INR 1515.13 to BigBasket on 2026-09-30,1000.0
+2026-09-30,353.71,McDonalds,Food,debit,manual,1,Paid INR 353.71 to McDonalds on 2026-09-30,1000.0
+2026-09-30,273.76,Swiggy,Food,debit,receipt,1,Paid INR 273.76 to Swiggy on 2026-09-30,1000.0
+2026-10-01,246.72,Starbucks,Food,debit,sms,1,Paid INR 246.72 to Starbucks on 2026-10-01,1000.0
+2026-10-02,1128.36,Amazon,Shopping,debit,sms,1,Paid INR 1128.36 to Amazon on 2026-10-02,1000.0
+2026-10-02,1783.66,BESCOM,Bills,debit,sms,1,Paid INR 1783.66 to BESCOM on 2026-10-02,1000.0
+2026-10-02,562.64,Blinkit,Groceries,debit,sms,1,Paid INR 562.64 to Blinkit on 2026-10-02,1000.0
+2026-10-02,4601.2,Amazon,Shopping,debit,receipt,1,Paid INR 4601.20 to Amazon on 2026-10-02,1000.0
+2026-10-02,5279.56,Flipkart,Shopping,debit,receipt,1,Paid INR 5279.56 to Flipkart on 2026-10-02,1000.0
+2026-10-03,498.93,Swiggy,Food,debit,sms,1,Paid INR 498.93 to Swiggy on 2026-10-03,1000.0
+2026-10-03,561.8,Dominos,Food,debit,sms,1,Paid INR 561.80 to Dominos on 2026-10-03,1000.0
+2026-10-03,2344.96,Zepto,Groceries,debit,sms,1,Paid INR 2344.96 to Zepto on 2026-10-03,1000.0
+2026-10-03,349.42,Chai Point,Food,debit,manual,1,Paid INR 349.42 to Chai Point on 2026-10-03,1000.0
+2026-10-03,1723.06,Indane Gas,Bills,debit,manual,1,Paid INR 1723.06 to Indane Gas on 2026-10-03,1000.0
+2026-10-04,586.57,Uber,Transport,debit,sms,1,Paid INR 586.57 to Uber on 2026-10-04,1000.0
+2026-10-04,1350.9,BESCOM,Bills,debit,receipt,1,Paid INR 1350.90 to BESCOM on 2026-10-04,1000.0
+2026-10-04,539.46,Zomato,Food,debit,sms,1,Paid INR 539.46 to Zomato on 2026-10-04,1000.0
+2026-10-04,353.36,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 353.36 to PVR Cinemas on 2026-10-04,1000.0
+2026-10-04,2351.98,Amazon,Shopping,debit,manual,1,Paid INR 2351.98 to Amazon on 2026-10-04,1000.0
+2026-10-05,712.7,McDonalds,Food,debit,receipt,1,Paid INR 712.70 to McDonalds on 2026-10-05,1000.0
+2026-10-05,1346.73,BESCOM,Bills,debit,receipt,1,Paid INR 1346.73 to BESCOM on 2026-10-05,1000.0
+2026-10-05,4419.22,Flipkart,Shopping,debit,sms,1,Paid INR 4419.22 to Flipkart on 2026-10-05,1000.0
+2026-10-06,361.96,Rapido,Transport,debit,sms,1,Paid INR 361.96 to Rapido on 2026-10-06,1000.0
+2026-10-06,604.42,McDonalds,Food,debit,receipt,1,Paid INR 604.42 to McDonalds on 2026-10-06,1000.0
+2026-10-06,1891.96,BigBasket,Groceries,debit,sms,1,Paid INR 1891.96 to BigBasket on 2026-10-06,1000.0
+2026-10-06,2946.61,BESCOM,Bills,debit,manual,1,Paid INR 2946.61 to BESCOM on 2026-10-06,1000.0
+2026-10-06,345.95,McDonalds,Food,debit,receipt,1,Paid INR 345.95 to McDonalds on 2026-10-06,1000.0
+2026-10-07,290.87,Metro Rail,Transport,debit,sms,1,Paid INR 290.87 to Metro Rail on 2026-10-07,1000.0
+2026-10-07,350.45,Petrol Pump,Transport,debit,sms,1,Paid INR 350.45 to Petrol Pump on 2026-10-07,1000.0
+2026-10-07,628.02,Dominos,Food,debit,manual,1,Paid INR 628.02 to Dominos on 2026-10-07,1000.0
+2026-10-08,332.64,Metro Rail,Transport,debit,sms,1,Paid INR 332.64 to Metro Rail on 2026-10-08,1000.0
+2026-10-08,91.49,Petrol Pump,Transport,debit,manual,1,Paid INR 91.49 to Petrol Pump on 2026-10-08,1000.0
+2026-10-08,1882.45,Cult.fit,Healthcare,debit,sms,1,Paid INR 1882.45 to Cult.fit on 2026-10-08,1000.0
+2026-10-09,76.9,Metro Rail,Transport,debit,sms,1,Paid INR 76.90 to Metro Rail on 2026-10-09,1000.0
+2026-10-09,542.45,Rapido,Transport,debit,manual,1,Paid INR 542.45 to Rapido on 2026-10-09,1000.0
+2026-10-09,166.48,Dominos,Food,debit,receipt,1,Paid INR 166.48 to Dominos on 2026-10-09,1000.0
+2026-10-10,203.62,Chai Point,Food,debit,sms,1,Paid INR 203.62 to Chai Point on 2026-10-10,1000.0
+2026-10-10,1177.49,Flipkart,Shopping,debit,sms,1,Paid INR 1177.49 to Flipkart on 2026-10-10,1000.0
+2026-10-11,228.46,Chai Point,Food,debit,sms,1,Paid INR 228.46 to Chai Point on 2026-10-11,1000.0
+2026-10-11,199.32,Rapido,Transport,debit,sms,1,Paid INR 199.32 to Rapido on 2026-10-11,1000.0
+2026-10-11,497.09,McDonalds,Food,debit,sms,1,Paid INR 497.09 to McDonalds on 2026-10-11,1000.0
+2026-10-11,1020.49,Amazon,Shopping,debit,sms,1,Paid INR 1020.49 to Amazon on 2026-10-11,1000.0
+2026-10-11,117.21,Petrol Pump,Transport,debit,sms,1,Paid INR 117.21 to Petrol Pump on 2026-10-11,1000.0
+2026-10-12,663.35,Zomato,Food,debit,manual,1,Paid INR 663.35 to Zomato on 2026-10-12,1000.0
+2026-10-12,166.57,McDonalds,Food,debit,receipt,1,Paid INR 166.57 to McDonalds on 2026-10-12,1000.0
+2026-10-12,1717.52,Blinkit,Groceries,debit,sms,1,Paid INR 1717.52 to Blinkit on 2026-10-12,1000.0
+2026-10-12,1567.79,Zepto,Groceries,debit,manual,1,Paid INR 1567.79 to Zepto on 2026-10-12,1000.0
+2026-10-12,20975.29,Luxury Watch Boutique,Shopping,debit,sms,1,Txn of INR 20975.29 at Luxury Watch Boutique on 2026-10-12,1000.0
+2026-10-13,500.12,Spotify,Entertainment,debit,receipt,1,Paid INR 500.12 to Spotify on 2026-10-13,1000.0
+2026-10-13,804.34,Starbucks,Food,debit,sms,1,Paid INR 804.34 to Starbucks on 2026-10-13,1000.0
+2026-10-14,1085.41,Spotify,Entertainment,debit,manual,1,Paid INR 1085.41 to Spotify on 2026-10-14,1000.0
+2026-10-14,829.89,McDonalds,Food,debit,receipt,1,Paid INR 829.89 to McDonalds on 2026-10-14,1000.0
+2026-10-14,491.43,Dominos,Food,debit,sms,1,Paid INR 491.43 to Dominos on 2026-10-14,1000.0
+2026-10-14,155.14,Swiggy,Food,debit,sms,1,Paid INR 155.14 to Swiggy on 2026-10-14,1000.0
+2026-10-15,692.0,McDonalds,Food,debit,receipt,1,Paid INR 692.00 to McDonalds on 2026-10-15,1000.0
+2026-10-15,669.48,Starbucks,Food,debit,sms,1,Paid INR 669.48 to Starbucks on 2026-10-15,1000.0
+2026-10-15,2828.16,Decathlon,Shopping,debit,sms,1,Paid INR 2828.16 to Decathlon on 2026-10-15,1000.0
+2026-10-15,5622.83,Myntra,Shopping,debit,sms,1,Paid INR 5622.83 to Myntra on 2026-10-15,1000.0
+2026-10-16,494.96,Dominos,Food,debit,receipt,1,Paid INR 494.96 to Dominos on 2026-10-16,1000.0
+2026-10-16,1012.75,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 1012.75 to PVR Cinemas on 2026-10-16,1000.0
+2026-10-17,730.48,Zomato,Food,debit,sms,1,Paid INR 730.48 to Zomato on 2026-10-17,1000.0
+2026-10-17,668.75,Zomato,Food,debit,manual,1,Paid INR 668.75 to Zomato on 2026-10-17,1000.0
+2026-10-17,741.62,Chai Point,Food,debit,sms,1,Paid INR 741.62 to Chai Point on 2026-10-17,1000.0
+2026-10-18,501.27,Uber,Transport,debit,receipt,1,Paid INR 501.27 to Uber on 2026-10-18,1000.0
+2026-10-19,1127.53,Water Supply,Bills,debit,manual,1,Paid INR 1127.53 to Water Supply on 2026-10-19,1000.0
+2026-10-19,317.69,DMart,Groceries,debit,manual,1,Paid INR 317.69 to DMart on 2026-10-19,1000.0
+2026-10-19,2020.45,Zepto,Groceries,debit,receipt,1,Paid INR 2020.45 to Zepto on 2026-10-19,1000.0
+2026-10-19,466.78,Petrol Pump,Transport,debit,receipt,1,Paid INR 466.78 to Petrol Pump on 2026-10-19,1000.0
+2026-10-19,601.74,Dominos,Food,debit,manual,1,Paid INR 601.74 to Dominos on 2026-10-19,1000.0
+2026-10-20,602.42,Myntra,Shopping,debit,receipt,1,Paid INR 602.42 to Myntra on 2026-10-20,1000.0
+2026-10-20,496.67,Metro Rail,Transport,debit,manual,1,Paid INR 496.67 to Metro Rail on 2026-10-20,1000.0
+2026-10-20,1814.23,Blinkit,Groceries,debit,sms,1,Paid INR 1814.23 to Blinkit on 2026-10-20,1000.0
+2026-10-20,71.58,Rapido,Transport,debit,receipt,1,Paid INR 71.58 to Rapido on 2026-10-20,1000.0
+2026-10-21,331.79,Metro Rail,Transport,debit,receipt,1,Paid INR 331.79 to Metro Rail on 2026-10-21,1000.0
+2026-10-21,780.39,Dominos,Food,debit,manual,1,Paid INR 780.39 to Dominos on 2026-10-21,1000.0
+2026-10-22,661.89,Starbucks,Food,debit,manual,1,Paid INR 661.89 to Starbucks on 2026-10-22,1000.0
+2026-10-22,269.5,BigBasket,Groceries,debit,receipt,1,Paid INR 269.50 to BigBasket on 2026-10-22,1000.0
+2026-10-23,612.07,Zomato,Food,debit,receipt,1,Paid INR 612.07 to Zomato on 2026-10-23,1000.0
+2026-10-23,181.61,Starbucks,Food,debit,sms,1,Paid INR 181.61 to Starbucks on 2026-10-23,1000.0
+2026-10-23,2217.8,Instamart,Groceries,debit,receipt,1,Paid INR 2217.80 to Instamart on 2026-10-23,1000.0
+2026-10-23,226.75,Spotify,Entertainment,debit,receipt,1,Paid INR 226.75 to Spotify on 2026-10-23,1000.0
+2026-10-24,676.16,BigBasket,Groceries,debit,receipt,1,Paid INR 676.16 to BigBasket on 2026-10-24,1000.0
+2026-10-24,1372.76,Amazon,Shopping,debit,manual,1,Paid INR 1372.76 to Amazon on 2026-10-24,1000.0
+2026-10-24,186.86,Uber,Transport,debit,sms,1,Paid INR 186.86 to Uber on 2026-10-24,1000.0
+2026-10-24,627.91,Swiggy,Food,debit,sms,1,Paid INR 627.91 to Swiggy on 2026-10-24,1000.0
+2026-10-24,782.4,McDonalds,Food,debit,manual,1,Paid INR 782.40 to McDonalds on 2026-10-24,1000.0
+2026-10-25,515.0,Zomato,Food,debit,sms,1,Paid INR 515.00 to Zomato on 2026-10-25,1000.0
+2026-10-25,576.65,Rapido,Transport,debit,sms,1,Paid INR 576.65 to Rapido on 2026-10-25,1000.0
+2026-10-25,299.84,Dominos,Food,debit,sms,1,Paid INR 299.84 to Dominos on 2026-10-25,1000.0
+2026-10-26,1482.73,DMart,Groceries,debit,manual,1,Paid INR 1482.73 to DMart on 2026-10-26,1000.0
+2026-10-26,2378.23,Zepto,Groceries,debit,receipt,1,Paid INR 2378.23 to Zepto on 2026-10-26,1000.0
+2026-10-26,1841.14,DMart,Groceries,debit,manual,1,Paid INR 1841.14 to DMart on 2026-10-26,1000.0
+2026-10-26,1070.17,PVR Cinemas,Entertainment,debit,sms,1,Paid INR 1070.17 to PVR Cinemas on 2026-10-26,1000.0
+2026-10-26,327.59,Starbucks,Food,debit,receipt,1,Paid INR 327.59 to Starbucks on 2026-10-26,1000.0
