@@ -55,6 +55,8 @@ def forecast_spend(rows: list[dict], horizon: int = 30) -> dict:
     predicted_spend = float(np.sum(used[:horizon]))
     return {
         "daily_forecast": [round(float(x), 2) for x in used[:horizon]],
+        "baseline_daily_forecast": [round(float(x), 2) for x in baseline[:horizon]],
+        "seasonal_daily_forecast": [round(float(x), 2) for x in seasonal[:horizon]],
         "predicted_spend": round(predicted_spend, 2),
         "baseline_predicted_spend": round(float(np.sum(baseline[:horizon])), 2),
         "model_name": model_name,
@@ -98,4 +100,5 @@ def _try_lstm(train, val, series, horizon):
 def persist_metrics(payload: dict, path: Path | None = None) -> None:
     target = path or MODEL_DIR / "last_forecast_metrics.json"
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    with target.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, indent=2)

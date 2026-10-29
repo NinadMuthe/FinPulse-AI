@@ -52,24 +52,32 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from pathlib import Path
+from fastapi import Request
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+_STATIC_DIR = Path(__file__).resolve().parent / "static"
+_STATIC_INDEX = _STATIC_DIR / "index.html"
+_STATIC_LOGIN = _STATIC_DIR / "login.html"
+_STATIC_DASHBOARD = _STATIC_DIR / "dashboard.html"
+
+if _STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
+
 app.include_router(api_router)
 app.include_router(aggregator_router, prefix="/aa", tags=["Account Aggregator"])
 
 
-
-from pathlib import Path
-from fastapi import Request
-from fastapi.responses import FileResponse
-
-_STATIC_INDEX = Path(__file__).resolve().parent / "static" / "index.html"
-
-
 @app.get("/", tags=["Root"])
 def root(request: Request):
-    """Root endpoint — serves Dashboard UI for web browsers and JSON for API clients."""
+    """Root endpoint — serves Login UI for web browsers and JSON for API clients."""
     accept = request.headers.get("accept", "")
-    if "text/html" in accept and _STATIC_INDEX.exists():
-        return FileResponse(_STATIC_INDEX)
+    if "text/html" in accept:
+        if _STATIC_LOGIN.exists():
+            return FileResponse(_STATIC_LOGIN)
+        elif _STATIC_INDEX.exists():
+            return FileResponse(_STATIC_INDEX)
     return {
         "project": "FinPulse AI",
         "message": "Personal Finance Assistant API is running.",
@@ -78,9 +86,22 @@ def root(request: Request):
     }
 
 
+@app.get("/login", tags=["Root"])
+def login_view():
+    """Explicit endpoint to view the web login screen in any browser."""
+    if _STATIC_LOGIN.exists():
+        return FileResponse(_STATIC_LOGIN)
+    return FileResponse(_STATIC_INDEX)
+
+
 @app.get("/dashboard", tags=["Root"])
-def dashboard_view():
+def dashboard_view(request: Request):
     """Explicit endpoint to view the web dashboard in any browser."""
+    accept = request.headers.get("accept", "")
+    if "text/html" in accept and _STATIC_DASHBOARD.exists():
+        return FileResponse(_STATIC_DASHBOARD)
+    if _STATIC_DASHBOARD.exists():
+        return FileResponse(_STATIC_DASHBOARD)
     return FileResponse(_STATIC_INDEX)
 
 

@@ -18,7 +18,11 @@ from backend.app.schemas.ml import (
 )
 from backend.app.services.advisor import build_system_context, llm_reply
 from backend.app.services.insights import run_anomaly_detection
-from backend.app.services.liquidity import DISCLAIMER, liquidity_state
+from backend.app.services.liquidity import (
+    DISCLAIMER,
+    get_user_liquidity_forecast,
+    liquidity_state,
+)
 from backend.app.services.transactions import list_transactions, to_dicts
 from backend.app.utils.deps import get_current_user
 from ml.anomaly_detection.duplicates import find_duplicates
@@ -33,6 +37,7 @@ router_advisor = APIRouter(prefix="/advisor", tags=["Advisor"])
 router_dashboard = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 
 _STATIC_INDEX = Path(__file__).resolve().parent.parent / "static" / "index.html"
+_STATIC_DASHBOARD = Path(__file__).resolve().parent.parent / "static" / "dashboard.html"
 
 
 def _insight_bundle(db: Session, current: User) -> dict:
@@ -58,32 +63,42 @@ def _insight_bundle(db: Session, current: User) -> dict:
 
 
 @router_forecast.get("", response_model=ForecastOut)
-def get_forecast(db: Session = Depends(get_db), current: User = Depends(get_current_user)) -> ForecastOut:
-    bundle = _insight_bundle(db, current)
-    forecast = bundle["forecast"]
-    liquidity = bundle["liquidity"]
+async def get_forecast(
+    db: Session = Depends(get_db),
+    current: User = Depends(get_current_user),
+) -> ForecastOut:
+    """GET /forecast
+
+    Asynchronously generates a 30-day forward-looking expenditure projection (via SpendLSTM / baselines),
+    baseline comparisons, and reconciles against the user's liquid cash balance to flag cash shortfalls.
+    Secured with existing JWT dependencies.
+    """
+    forecast_data = await get_user_liquidity_forecast(db, current, horizon_days=30)
+
     record = Forecast(
         user_id=current.id,
-        horizon_days=30,
-        predicted_spend=forecast["predicted_spend"],
-        predicted_balance=liquidity["predicted_balance"],
-        shortfall_amount=liquidity["shortfall_amount"],
-        model_name=forecast["model_name"],
-        metrics_json=str(forecast["metrics"]),
+        horizon_days=forecast_data["horizon_days"],
+        predicted_spend=forecast_data["predicted_spend"],
+        predicted_balance=forecast_data["predicted_balance"],
+        shortfall_amount=forecast_data["shortfall_amount"],
+        model_name=forecast_data["model_name"],
+        metrics_json=str(forecast_data["metrics"]),
     )
     db.add(record)
     db.commit()
+
     return ForecastOut(
-        horizon_days=30,
-        predicted_spend=forecast["predicted_spend"],
-        predicted_balance=liquidity["predicted_balance"],
-        shortfall_amount=liquidity["shortfall_amount"],
-        model_name=forecast["model_name"],
-        daily_forecast=forecast.get("daily_forecast", []),
-        baseline_predicted_spend=forecast["baseline_predicted_spend"],
-        metrics=forecast["metrics"],
-        warning=liquidity["warning"],
-        disclaimer=liquidity["disclaimer"],
+        horizon_days=forecast_data["horizon_days"],
+        predicted_spend=forecast_data["predicted_spend"],
+        predicted_balance=forecast_data["predicted_balance"],
+        shortfall_amount=forecast_data["shortfall_amount"],
+        model_name=forecast_data["model_name"],
+        daily_forecast=forecast_data.get("daily_forecast", []),
+        baseline_predicted_spend=forecast_data.get("baseline_predicted_spend"),
+        baseline_daily_forecast=forecast_data.get("baseline_daily_forecast", []),
+        metrics=forecast_data.get("metrics", {}),
+        warning=forecast_data["warning"],
+        disclaimer=forecast_data["disclaimer"],
     )
 
 
@@ -92,8 +107,7 @@ def get_anomalies(
     db: Session = Depends(get_db),
     current: User = Depends(get_current_user),
 ) -> dict:
-    """
-    GET /anomalies
+    """GET /anomalies
 
     Runs an Isolation Forest model trained on the authenticated user's
     historical debit transactions and returns flagged statistical outliers.
@@ -169,8 +183,11 @@ def dashboard(
     current: User = Depends(get_current_user),
 ):
     accept = request.headers.get("accept", "")
-    if "text/html" in accept and _STATIC_INDEX.exists():
-        return FileResponse(_STATIC_INDEX)
+    if "text/html" in accept:
+        if _STATIC_DASHBOARD.exists():
+            return FileResponse(_STATIC_DASHBOARD)
+        elif _STATIC_INDEX.exists():
+            return FileResponse(_STATIC_INDEX)
 
     bundle = _insight_bundle(db, current)
     month_spend = sum(

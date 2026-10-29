@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinPulse AI — Financial Intelligence Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #080c14;
+      --card-bg: rgba(17, 24, 39, 0.72);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --input-bg: rgba(11, 15, 25, 0.85);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --cyan: #06b6d4;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --danger: #ef4444;
+      --danger-bg: rgba(239, 68, 68, 0.12);
+      --danger-border: rgba(239, 68, 68, 0.35);
+      --warning: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, 0.12);
+      --warning-border: rgba(245, 158, 11, 0.3);
+      --success: #10b981;
+      --success-bg: rgba(16, 185, 129, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.09) 0%, transparent 45%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(6, 182, 212, 0.25));
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: var(--cyan);
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tag {
+      font-size: 0.7rem;
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.825rem;
+    }
+
+    .user-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.825rem;
+      font-weight: 500;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--card-border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+
+    .btn-danger:hover {
+      background: rgba(239, 68, 68, 0.25);
+    }
+
+    /* Main Container */
+    .dashboard-container {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Shortfall / Liquidity Warning Banner */
+    .warning-banner {
+      display: none;
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      color: #fecaca;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .warning-banner-content {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .warning-banner svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: #ef4444;
+    }
+
+    .warning-text h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+
+    .warning-text p {
+      font-size: 0.85rem;
+      color: #fca5a5;
+    }
+
+    /* Stats Row */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.25rem 1.4rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+
+    .stat-card:hover::after {
+      background: linear-gradient(90deg, var(--primary), var(--cyan));
+    }
+
+    .stat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .stat-value {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-sub {
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-dim);
+    }
+
+    .stat-sub.positive { color: var(--success); }
+    .stat-sub.negative { color: var(--danger); }
+    .stat-sub.neutral { color: var(--cyan); }
+
+    /* Main Content Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1.1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1080px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .col-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Cards */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .card-title-group svg {
+      width: 20px;
+      height: 20px;
+      color: var(--cyan);
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .card-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .card-body {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      position: relative;
+      height: 280px;
+      width: 100%;
+    }
+
+    .chart-metrics-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .metric-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      color: var(--text-muted);
+    }
+
+    /* Transactions Table */
+    .tx-controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .search-input {
+      flex: 1;
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.5rem 0.85rem;
+      color: #fff;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .tx-scroll-area {
+      max-height: 380px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    }
+
+    .tx-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .tx-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.9rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+      transition: background 0.15s ease;
+    }
+
+    .tx-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tx-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .tx-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+    }
+
+    .tx-icon.credit {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+    }
+
+    .tx-details h5 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 0.15rem;
+    }
+
+    .tx-meta {
+      font-size: 0.725rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+    }
+
+    .tx-amount {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .tx-amount.debit { color: #f87171; }
+    .tx-amount.credit { color: #34d399; }
+
+    /* Anomalies Section */
+    .anomaly-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .anomaly-card {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 12px;
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .anomaly-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .anomaly-merchant {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .anomaly-amount {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #f87171;
+    }
+
+    .anomaly-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .anomaly-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: rgba(239, 68, 68, 0.2);
+      color: #fecaca;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .anomaly-reason {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      line-height: 1.35;
+    }
+
+    /* AI Advisor Widget */
+    .advisor-chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 480px;
+    }
+
+    .advisor-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    }
+
+    .chat-bubble {
+      max-width: 86%;
+      padding: 0.75rem 0.95rem;
+      border-radius: 12px;
+      font-size: 0.825rem;
+      line-height: 1.45;
+      position: relative;
+    }
+
+    .chat-bubble.assistant {
+      align-self: flex-start;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f1f5f9;
+      border-bottom-left-radius: 2px;
+    }
+
+    .chat-bubble.user {
+      align-self: flex-end;
+      background: linear-gradient(135deg, var(--primary), #4338ca);
+      color: #ffffff;
+      border-bottom-right-radius: 2px;
+    }
+
+    .chat-prompts {
+      padding: 0.5rem 1rem;
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .prompt-chip {
+      white-space: nowrap;
+      font-size: 0.725rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #c7d2fe;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .prompt-chip:hover {
+      background: rgba(99, 102, 241, 0.25);
+    }
+
+    .chat-input-bar {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem;
+      border-top: 1px solid var(--card-border);
+      background: rgba(11, 15, 25, 0.5);
+    }
+
+    .chat-input {
+      flex: 1;
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.6rem 0.85rem;
+      color: #fff;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .chat-input:focus {
+      border-color: var(--primary);
+    }
+
+    .chat-send-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0 1rem;
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background 0.2s ease;
+    }
+
+    .chat-send-btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .chat-send-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Skeleton Loading / Empty states */
+    .empty-state {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-dim);
+      font-size: 0.825rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand-section">
+      <div class="logo-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h1>FinPulse AI</h1>
+          <span class="brand-tag">PostgreSQL • PyTorch • Gemini 3.8</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <div class="user-pill" id="user-pill">
+        <div class="user-avatar" id="user-avatar">D</div>
+        <span id="user-email">demo@finpulse.ai</span>
+      </div>
+      <button class="btn btn-secondary" id="refresh-btn" title="Refresh Live Data">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+        Refresh
+      </button>
+      <button class="btn btn-danger" id="logout-btn" title="Sign out">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        Logout
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-container">
+
+    <!-- Liquidity Shortfall Warning Banner -->
+    <div class="warning-banner" id="warning-banner">
+      <div class="warning-banner-content">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <div class="warning-text">
+          <h4 id="warning-banner-title">Liquidity Shortfall Detected</h4>
+          <p id="warning-banner-msg">Your projected 30-day spending exceeds your liquid cash balance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Summary Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-header">
+          <span>Liquid Balance</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <div class="stat-value" id="stat-balance">₹--</div>
+        <div class="stat-sub neutral" id="stat-balance-sub">Available capital in ledger</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span>30-Day Forecast Spend</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+        </div>
+        <div class="stat-value" id="stat-forecast">₹--</div>
+        <div class="stat-sub neutral" id="stat-model-sub">Model: SpendLSTM (W=14)</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span>Projected Net Runway</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+        </div>
+        <div class="stat-value" id="stat-runway">₹--</div>
+        <div class="stat-sub" id="stat-runway-sub">Estimated net cash flow</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span>Flagged Anomalies</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="stat-value" id="stat-anomalies">0</div>
+        <div class="stat-sub negative" id="stat-anomalies-sub">Isolation Forest outliers</div>
+      </div>
+    </section>
+
+    <!-- Main Two-Column Layout -->
+    <section class="main-grid">
+
+      <!-- Left Column: Forecast Chart & Transactions -->
+      <div class="col-stack">
+
+        <!-- Forecast Chart Card -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3v18h18"/>
+                <path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+              <div>
+                <h3 class="card-title">30-Day Liquidity & Spend Forecast</h3>
+                <p class="card-subtitle">PyTorch SpendLSTM vs. 7-Day Moving Average Baseline</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container">
+              <canvas id="forecastChart"></canvas>
+            </div>
+            <div class="chart-metrics-bar">
+              <span class="metric-pill" id="metric-mae">MAE: Calculating...</span>
+              <span class="metric-pill" id="metric-rmse">RMSE: Calculating...</span>
+              <span class="metric-pill" id="metric-baseline">Baseline: 7-day MA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transactions Card -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+              <div>
+                <h3 class="card-title">Recent Transactions</h3>
+                <p class="card-subtitle">Ledger records verified from database</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tx-controls">
+              <input type="text" id="tx-search" class="search-input" placeholder="Search merchant, category, or note...">
+            </div>
+            <div class="tx-scroll-area">
+              <div class="tx-list" id="tx-list">
+                <div class="empty-state">Loading transactions...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Anomalies & AI Advisor -->
+      <div class="col-stack">
+
+        <!-- Isolation Forest Anomalies Box -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ef4444;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <div>
+                <h3 class="card-title">Statistical Anomalies</h3>
+                <p class="card-subtitle">Isolation Forest detected behavior deviations</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="anomaly-list" id="anomaly-list">
+              <div class="empty-state">Scanning transactions for outliers...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Advisor Chat Widget -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #818cf8;">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <div>
+                <h3 class="card-title">AI Financial Advisor</h3>
+                <p class="card-subtitle">Strictly grounded on your verified ledger</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="advisor-chat-container">
+            <div class="advisor-messages" id="chat-messages">
+              <div class="chat-bubble assistant">
+                Hello! I am your FinPulse Advisory Assistant. I have direct access to your current balance, upcoming recurring expenses, spend forecast, and anomaly reports. How can I assist your liquidity planning today?
+              </div>
+            </div>
+
+            <!-- Suggestion chips -->
+            <div class="chat-prompts">
+              <button class="prompt-chip" data-prompt="How is my 30-day liquidity looking?">How is my liquidity?</button>
+              <button class="prompt-chip" data-prompt="Explain the detected anomalies in detail.">Explain anomalies</button>
+              <button class="prompt-chip" data-prompt="Can I safely afford a ₹15,000 purchase this month?">Can I spend ₹15k?</button>
+            </div>
+
+            <!-- Chat input bar -->
+            <form class="chat-input-bar" id="chat-form">
+              <input type="text" id="chat-input" class="chat-input" placeholder="Ask your advisor about spend or budgets..." autocomplete="off">
+              <button type="submit" class="chat-send-btn" id="chat-send-btn">
+                <span>Ask</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // 1. Session Verification
+    const token = localStorage.getItem('fp_token');
+    if (!token) {
+      window.location.href = window.location.pathname.includes('/static/') ? 'login.html' : '/login';
+    }
+
+    const authHeaders = {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    };
+
+    let forecastChartInstance = null;
+    let allTransactions = [];
+
+    // Format currency helper (INR)
+    function formatINR(val) {
+      if (val === null || val === undefined || isNaN(val)) return '₹0.00';
+      return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 2
+      }).format(val);
+    }
+
+    // Logout
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('fp_token');
+      window.location.href = window.location.pathname.includes('/static/') ? 'login.html' : '/login';
+    });
+
+    // Refresh
+    document.getElementById('refresh-btn').addEventListener('click', () => {
+      loadAllData();
+    });
+
+    // 2. Fetch User Profile
+    async function fetchUserProfile() {
+      try {
+        const res = await fetch('/users/me', { headers: authHeaders });
+        if (res.status === 401) {
+          localStorage.removeItem('fp_token');
+          window.location.href = window.location.pathname.includes('/static/') ? 'login.html' : '/login';
+          return;
+        }
+        if (res.ok) {
+          const user = await res.json();
+          document.getElementById('user-email').textContent = user.email;
+          document.getElementById('user-avatar').textContent = (user.full_name || user.email)[0].toUpperCase();
+          document.getElementById('stat-balance').textContent = formatINR(user.current_balance);
+        }
+      } catch (err) {
+        console.error('Error fetching user profile:', err);
+      }
+    }
+
+    // 3. Fetch Forecast & Shortfall
+    async function fetchForecast() {
+      try {
+        const res = await fetch('/forecast', { headers: authHeaders });
+        if (!res.ok) return;
+
+        const data = await res.json();
+
+        // Update Stat Cards
+        document.getElementById('stat-forecast').textContent = formatINR(data.predicted_spend);
+        document.getElementById('stat-model-sub').textContent = `Head: ${data.model_name || 'SpendLSTM'}`;
+
+        const netRunway = data.predicted_balance;
+        const runwayEl = document.getElementById('stat-runway');
+        const runwaySubEl = document.getElementById('stat-runway-sub');
+        runwayEl.textContent = formatINR(netRunway);
+
+        if (data.shortfall_amount > 0) {
+          runwaySubEl.className = 'stat-sub negative';
+          runwaySubEl.textContent = `Shortfall of ${formatINR(data.shortfall_amount)}`;
+
+          // Show Warning Banner
+          const banner = document.getElementById('warning-banner');
+          const title = document.getElementById('warning-banner-title');
+          const msg = document.getElementById('warning-banner-msg');
+          title.textContent = `Liquidity Alert: Shortfall of ${formatINR(data.shortfall_amount)}`;
+          msg.textContent = data.warning || `Your 30-day forecast (${formatINR(data.predicted_spend)}) exceeds liquid balance.`;
+          banner.style.display = 'block';
+        } else {
+          runwaySubEl.className = 'stat-sub positive';
+          runwaySubEl.textContent = 'Liquidity buffer sufficient';
+          document.getElementById('warning-banner').style.display = 'none';
+        }
+
+        // Metrics bar
+        if (data.metrics) {
+          if (data.metrics.mae !== undefined) {
+            document.getElementById('metric-mae').textContent = `MAE: ${formatINR(data.metrics.mae)}`;
+          }
+          if (data.metrics.rmse !== undefined) {
+            document.getElementById('metric-rmse').textContent = `RMSE: ${formatINR(data.metrics.rmse)}`;
+          }
+        }
+        if (data.baseline_predicted_spend !== undefined) {
+          document.getElementById('metric-baseline').textContent = `7-Day MA Total: ${formatINR(data.baseline_predicted_spend)}`;
+        }
+
+        // Render Chart
+        renderForecastChart(data);
+
+      } catch (err) {
+        console.error('Error fetching forecast:', err);
+      }
+    }
+
+    // Render Forecast Chart with Chart.js
+    function renderForecastChart(data) {
+      const ctx = document.getElementById('forecastChart').getContext('2d');
+      const dailyForecast = data.daily_forecast || [];
+      const baselineForecast = data.baseline_daily_forecast || [];
+
+      const labels = dailyForecast.map((_, idx) => `Day +${idx + 1}`);
+
+      if (forecastChartInstance) {
+        forecastChartInstance.destroy();
+      }
+
+      // Gradient for LSTM
+      const lstmGradient = ctx.createLinearGradient(0, 0, 0, 260);
+      lstmGradient.addColorStop(0, 'rgba(99, 102, 241, 0.4)');
+      lstmGradient.addColorStop(1, 'rgba(99, 102, 241, 0.0)');
+
+      forecastChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'SpendLSTM Projection',
+              data: dailyForecast,
+              borderColor: '#6366f1',
+              backgroundColor: lstmGradient,
+              borderWidth: 2.5,
+              tension: 0.35,
+              fill: true,
+              pointRadius: 2,
+              pointHoverRadius: 5
+            },
+            {
+              label: '7-Day Moving Avg Baseline',
+              data: baselineForecast,
+              borderColor: '#06b6d4',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              tension: 0.2,
+              fill: false,
+              pointRadius: 0
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: {
+            mode: 'index',
+            intersect: false
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: '#94a3b8',
+                font: { size: 11 }
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `${context.dataset.label}: ${formatINR(context.raw)}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(255, 255, 255, 0.05)' },
+              ticks: { color: '#64748b', maxTicksLimit: 10 }
+            },
+            y: {
+              grid: { color: 'rgba(255, 255, 255, 0.05)' },
+              ticks: {
+                color: '#64748b',
+                callback: function(val) { return '₹' + val; }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // 4. Fetch Anomalies
+    async function fetchAnomalies() {
+      const container = document.getElementById('anomaly-list');
+      try {
+        const res = await fetch('/anomalies', { headers: authHeaders });
+        if (!res.ok) {
+          container.innerHTML = '<div class="empty-state">Unable to load anomalies.</div>';
+          return;
+        }
+
+        const data = await res.json();
+        const anomalies = data.anomalies || [];
+        document.getElementById('stat-anomalies').textContent = anomalies.length;
+
+        if (anomalies.length === 0) {
+          container.innerHTML = '<div class="empty-state">No statistical anomalies detected. Spending velocity normal.</div>';
+          return;
+        }
+
+        container.innerHTML = anomalies.map(anom => {
+          const tags = anom.features_triggered || [];
+          const tagsHtml = tags.map(t => `<span class="anomaly-tag">${t.replace(/_/g, ' ')}</span>`).join('');
+          return `
+            <div class="anomaly-card">
+              <div class="anomaly-top">
+                <span class="anomaly-merchant">${anom.merchant || 'Unknown Merchant'}</span>
+                <span class="anomaly-amount">${formatINR(anom.amount)}</span>
+              </div>
+              <div class="anomaly-tags">
+                ${tagsHtml || '<span class="anomaly-tag">Statistical Outlier</span>'}
+                <span class="badge" style="background: rgba(255,255,255,0.08);">${anom.date}</span>
+              </div>
+              <p class="anomaly-reason">${anom.explanation || 'Flagged by Isolation Forest due to deviation from baseline spending.'}</p>
+            </div>
+          `;
+        }).join('');
+
+      } catch (err) {
+        console.error('Error fetching anomalies:', err);
+        container.innerHTML = '<div class="empty-state">Error loading anomaly detection results.</div>';
+      }
+    }
+
+    // 5. Fetch Transactions
+    async function fetchTransactions() {
+      const listEl = document.getElementById('tx-list');
+      try {
+        const res = await fetch('/transactions', { headers: authHeaders });
+        if (!res.ok) {
+          listEl.innerHTML = '<div class="empty-state">Unable to load transactions.</div>';
+          return;
+        }
+
+        allTransactions = await res.json();
+        renderTransactions(allTransactions);
+      } catch (err) {
+        console.error('Error fetching transactions:', err);
+        listEl.innerHTML = '<div class="empty-state">Error loading transaction feed.</div>';
+      }
+    }
+
+    function renderTransactions(txList) {
+      const listEl = document.getElementById('tx-list');
+      if (!txList || txList.length === 0) {
+        listEl.innerHTML = '<div class="empty-state">No transactions match your search.</div>';
+        return;
+      }
+
+      listEl.innerHTML = txList.slice(0, 50).map(tx => {
+        const isCredit = tx.transaction_type === 'credit';
+        const iconLetter = isCredit ? '↓' : '↑';
+        const sign = isCredit ? '+' : '-';
+        const amountClass = isCredit ? 'credit' : 'debit';
+        const dateStr = tx.transaction_date ? tx.transaction_date.split('T')[0] : '';
+
+        return `
+          <div class="tx-item">
+            <div class="tx-info">
+              <div class="tx-icon ${amountClass}">${iconLetter}</div>
+              <div class="tx-details">
+                <h5>${tx.merchant || 'Merchant'}</h5>
+                <div class="tx-meta">
+                  <span class="badge">${tx.category || 'General'}</span>
+                  <span>${dateStr}</span>
+                </div>
+              </div>
+            </div>
+            <div class="tx-amount ${amountClass}">
+              ${sign}${formatINR(tx.amount)}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Search filter for transactions
+    document.getElementById('tx-search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = allTransactions.filter(tx => 
+        (tx.merchant && tx.merchant.toLowerCase().includes(query)) ||
+        (tx.category && tx.category.toLowerCase().includes(query)) ||
+        (tx.description && tx.description.toLowerCase().includes(query))
+      );
+      renderTransactions(filtered);
+    });
+
+    // 6. AI Advisor Chat
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatSendBtn = document.getElementById('chat-send-btn');
+    const chatMessages = document.getElementById('chat-messages');
+
+    function appendMessage(role, text) {
+      const bubble = document.createElement('div');
+      bubble.className = `chat-bubble ${role}`;
+      bubble.textContent = text;
+      chatMessages.appendChild(bubble);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return bubble;
+    }
+
+    async function sendAdvisorMessage(userText) {
+      if (!userText.trim()) return;
+
+      appendMessage('user', userText);
+      chatInput.value = '';
+      chatSendBtn.disabled = true;
+
+      const thinkingBubble = appendMessage('assistant', 'Analyzing your financial ledger and forecasting data...');
+
+      try {
+        const res = await fetch('/advisor/chat', {
+          method: 'POST',
+          headers: authHeaders,
+          body: JSON.stringify({ message: userText })
+        });
+
+        if (!res.ok) {
+          throw new Error('Failed to retrieve advisory response.');
+        }
+
+        const data = await res.json();
+        thinkingBubble.textContent = data.reply;
+      } catch (err) {
+        thinkingBubble.textContent = "I'm having trouble analyzing your ledger right now. Please verify your connection or try again.";
+      } finally {
+        chatSendBtn.disabled = false;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendAdvisorMessage(chatInput.value);
+    });
+
+    document.querySelectorAll('.prompt-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const prompt = chip.getAttribute('data-prompt');
+        sendAdvisorMessage(prompt);
+      });
+    });
+
+    // 7. Load all data
+    function loadAllData() {
+      fetchUserProfile();
+      fetchForecast();
+      fetchAnomalies();
+      fetchTransactions();
+    }
+
+    loadAllData();
+  </script>
+</body>
+</html>

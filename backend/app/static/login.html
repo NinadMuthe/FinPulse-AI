@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinPulse AI — Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --input-bg: rgba(11, 15, 25, 0.8);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --cyan: #06b6d4;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --danger: #ef4444;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #06b6d4, #10b981);
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      margin-bottom: 1rem;
+      color: var(--cyan);
+    }
+
+    .logo-badge svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .brand-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.35rem;
+    }
+
+    .brand-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .demo-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px dashed rgba(99, 102, 241, 0.35);
+      border-radius: 10px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: #c7d2fe;
+    }
+
+    .demo-pill span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .demo-btn {
+      background: rgba(99, 102, 241, 0.25);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .demo-btn:hover {
+      background: rgba(99, 102, 241, 0.4);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: #64748b;
+      pointer-events: none;
+      transition: color 0.2s ease;
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem 0.75rem 2.4rem;
+      color: #fff;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    }
+
+    .form-input:focus + svg,
+    .form-input:focus ~ svg {
+      color: var(--cyan);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary) 0%, #4338ca 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .alert-box {
+      display: none;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 8px;
+      padding: 0.75rem;
+      color: #fca5a5;
+      font-size: 0.825rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .footer-meta {
+      margin-top: 1.75rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="brand-header">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+      </div>
+      <h1 class="brand-title">FinPulse AI</h1>
+      <p class="brand-subtitle">Autonomous Personal Finance & Liquidity Engine</p>
+    </div>
+
+    <div class="demo-pill">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        Demo credentials ready
+      </span>
+      <button type="button" class="demo-btn" id="autofill-btn">Fill Demo</button>
+    </div>
+
+    <div id="alert-box" class="alert-box"></div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <div class="input-wrapper">
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            required 
+            value="demo@finpulse.ai" 
+            placeholder="name@example.com"
+          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <div class="input-wrapper">
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-input" 
+            required 
+            value="demo" 
+            placeholder="••••••••"
+          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span>Sign In to Dashboard</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </form>
+
+    <div class="footer-meta">
+      Powered by PyTorch LSTM • Isolation Forest • Gemini 3.8 Flash
+    </div>
+  </div>
+
+  <script>
+    // Auto-redirect if already logged in
+    (function checkExistingSession() {
+      const token = localStorage.getItem('fp_token');
+      if (token) {
+        // Redirect to dashboard
+        window.location.href = window.location.pathname.includes('/static/') 
+          ? 'dashboard.html' 
+          : '/dashboard';
+      }
+    })();
+
+    const loginForm = document.getElementById('login-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const alertBox = document.getElementById('alert-box');
+    const autofillBtn = document.getElementById('autofill-btn');
+
+    autofillBtn.addEventListener('click', () => {
+      document.getElementById('email').value = 'demo@finpulse.ai';
+      document.getElementById('password').value = 'demo';
+    });
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.style.display = 'none';
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> Authenticating...';
+
+      try {
+        const response = await fetch('/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.detail || 'Authentication failed. Please check credentials.');
+        }
+
+        if (data.access_token) {
+          localStorage.setItem('fp_token', data.access_token);
+          // Redirect to dashboard
+          window.location.href = window.location.pathname.includes('/static/') 
+            ? 'dashboard.html' 
+            : '/dashboard';
+        } else {
+          throw new Error('No access token returned from server.');
+        }
+      } catch (err) {
+        alertBox.textContent = err.message;
+        alertBox.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Sign In to Dashboard</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+      }
+    });
+  </script>
+</body>
+</html>

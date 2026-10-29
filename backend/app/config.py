@@ -16,24 +16,26 @@ class Settings(BaseSettings):
     APP_DEBUG: bool = True
     APP_SECRET_KEY: str = "change-me-in-production"
 
-    # SQLite by default so the API runs without PostgreSQL installed.
-    # For PostgreSQL: postgresql+psycopg://USER:PASSWORD@localhost:5432/finpulse
-    DATABASE_URL: str = "sqlite:///./backend/finpulse.db"
+    # PostgreSQL / SQLite connection string
+    DATABASE_URL: str = "postgresql+psycopg://postgres:Ninad%231973@localhost:5432/finpulse"
 
     JWT_SECRET_KEY: str = "change-me-in-production"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24
 
-    # Exactly one LLM provider is used. Leave empty to use the deterministic advisor.
+    # LLM / AI Advisory configuration
     LLM_PROVIDER: str = "gemini"
     GOOGLE_API_KEY: str = ""
     OPENAI_API_KEY: str = ""
 
+    # Plaid Sandbox integration
+    PLAID_CLIENT_ID: str = ""
+    PLAID_SECRET: str = ""
+    PLAID_ENV: str = "sandbox"
+
     LOG_LEVEL: str = "INFO"
 
-    # ──────────────────────────────────────────────────────────────────
     # Setu Account Aggregator (AA) Sandbox
-    # Leave empty; the /aa/* routes will return HTTP 503 until credentials are set.
     SETU_CLIENT_ID: str = ""
     SETU_CLIENT_SECRET: str = ""
     SETU_PRODUCT_INSTANCE_ID: str = ""

@@ -12,6 +12,7 @@ class ForecastOut(BaseModel):
     model_name: str
     daily_forecast: list[float] = Field(default_factory=list)
     baseline_predicted_spend: float | None = None
+    baseline_daily_forecast: list[float] = Field(default_factory=list)
     metrics: dict = Field(default_factory=dict)
     warning: str
     disclaimer: str
